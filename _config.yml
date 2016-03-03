@@ -12,7 +12,7 @@ url: "http://yetanother.site"
 #
 # NB! Without this *nothing* will work, because it's used in every path :)
 
-baseurl: /
+baseurl: www.yetanother.site/
 
 # Google tracking id to track your visitors
 
