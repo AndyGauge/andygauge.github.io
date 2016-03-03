@@ -149,7 +149,7 @@ a {
     width: 100%;
     height: auto;
     padding: 100px 0;
-    text-align: center;
+    text-align: left;
     color: $intro-text-color;
     {% if site.background-img %}
     background: url({{ site.background-img }}) no-repeat bottom center scroll;
@@ -166,7 +166,7 @@ a {
             font-size: 40px;
         }
         .intro-text {
-            font-size: 18px;
+            font-size: 14px;
             @if $navbar-text-shadow {
                 text-shadow: 1px 0 1px #000;
             }
@@ -180,7 +180,7 @@ a {
                 font-size: 100px;
             }
             .intro-text {
-                font-size: 26px;
+                font-size: 14px;
             }
         }
     }
@@ -423,4 +423,21 @@ body {
 
 .fourofour {
   border: 1px solid $dark !important;
+}
+
+/* typed code tabs */
+.code_tab {
+  margin-left: 22px;
+}
+.code_2tab {
+  margin-left: 44px;
+}
+.code_3tab {
+  margin-left: 66px;
+}
+.code_4tab {
+  margin-left: 88px;
+}
+.code_5tab {
+  margin-left: 110px;
 }
