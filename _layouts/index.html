@@ -18,6 +18,9 @@
           {% include {{ page.path }} %}
         {% endif %}
       {% endfor %}
+      {% if p[1] == 'faq' %}
+        <img src="img/railway.jpg" style="width:100%"/>
+      {% endif %}
     {% endfor %}
 
     {% include footer.html %}
