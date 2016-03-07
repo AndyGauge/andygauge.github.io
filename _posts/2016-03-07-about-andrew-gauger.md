@@ -1,9 +1,11 @@
 ---
-layout: null
-section-type: about
-title: About
+layout: post
+section-type: post
+title: 'Andrew Gauger - Origins'
+category: launch
+tags: [ 'yetanother' ]
 ---
-## About
+## Andrew Gauger 
 
 Andrew Gauger started writing code in 1993, at age 9.  While his family gathered for movies, he poured over code.
 By 1996, Andrew launched his first website, Maximus Programming Pavilion, named after his best friend, a stuffed dog.  The site taught Qbasic and HTML.  That was the last site Andrew designed that used framesets.
