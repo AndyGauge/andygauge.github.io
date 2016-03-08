@@ -3,6 +3,14 @@
 
 .col-md-4.callout-box {
   background: #EDFF31;
+}
+.col-md-4.question {
+  background: #CD4444;
+}
+.col-md-4.answer {
+  background: #4444CD;
+}
+.col-md-4.callout-box, .col-md-4.question, .col-md-4.answer {
   border: black 2px;
   border-radius: 10px;
   color: black;
