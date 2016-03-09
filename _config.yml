@@ -203,6 +203,7 @@ social:
 pages_list:
   Faq: 'faq'
   Blog: 'latest-post'
+  Samples: 'samples'
   Timeline: 'timeline'
   Contact: 'contact'
 
