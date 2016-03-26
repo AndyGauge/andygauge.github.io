@@ -71,6 +71,6 @@ The Verse may or may not exist.  We only know about the slug of the Verse which 
 
 Once the vote is found/created, the tally is updated.  The progressbar was initially set at the size of the file, so each line increments the progress.  The import is slow (relative), so feedback is important to know the process hasn't stalled.
 
-Now that we have a topic to verse relationship, we can train naive bayes to classify prayers based on their topic.  Once naive bayes knows what to look for, it will choose which verse to recommend based on statistical analysis using Bayesian probability.  Part II will incude reversing the relationship so each of the verses become categories and the topics are used to train the classifier.
+Now that we have a topic to verse relationship, we can train naive bayes to classify prayers based on their topic.  Once naive bayes knows what to look for, it will choose which verse to recommend based on statistical analysis using Bayesian probability.  [Part II](/praybook/2016/03/25/prayer-lexer-part-2.html) incudes reversing the relationship so each of the verses become categories and the topics are used to train the classifier.
 
 Check out the Github repository at [AndyGauge/prayer-lexer](https://github.com/andygauge/prayer-lexer)
