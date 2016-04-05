@@ -4,7 +4,7 @@ section-type: post
 title: 'Github Pages with Jekyll'
 category: presentation
 permalink: /github-pages
-tags: [ 'jekyll', 'github' ]
+tags: [ 'jekyll' ]
 ---
 
 Before beginning the talk on Github Pages with Jekyll, we need to talk about Ruby on Windows.
