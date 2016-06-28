@@ -6,7 +6,7 @@ category: jekyll
 tags: [ 'WSL' ]
 ---
 
-In [Github Pages With Jekyll](/github-pages) I discussed my preference for running Linux tools on top of Windows, A Virtual Machine.  This isolation allows the Linux file system to be native to the kernel.  The Ext4 file system exists within a single file on the Host machine.  This is not a walk through, but rather supplemental information to that outlined in the previous post.
+In [Github Pages With Jekyll](/github-pages) I discussed my preference for running Linux tools on top of Windows, A Virtual Machine.  This isolation allows the Linux file system to be native to the kernel.  The Ext4 file system exists within a single file on the Host machine.
 
 Microsoft Build 2016 rocked the world announcing Bash would be ported to Windows in the latest Windows Preview, a week later [Windows Blog](https://blogs.windows.com/windowsexperience/2016/04/06/announcing-windows-10-insider-preview-build-14316/) made the release announcement.  Another post by [Mike Harsh](https://blogs.windows.com/buildingapps/2016/03/30/run-bash-on-ubuntu-on-windows/) details the offering.  Just about every google search I do looking for details about using the subsystem fills the page with instructions how to install Windows Insider Preview.  [This one](http://www.howtogeek.com/249966/how-to-install-and-use-the-linux-bash-shell-on-windows-10/) had all the information I needed to get it running.
 
