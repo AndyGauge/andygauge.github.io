@@ -5,18 +5,15 @@
   <div class="row">
     <div class="col-md-10 col-md-offset-1">
       <h3>Samples <small>{{ page.content }}</small></h3>
-      <div class="col-md-4">
-        <a href="http://praybook.xyz"><img src="/img/samples/praybook.jpg"/></a>
+      {% for sample in page.samples %}
+      <div class="row">
+        <div class="col-md-4">
+          <a href="{{sample.url}}"><img src="{{sample.img}}" class="top-pad-img"/></a>
+        </div>
+        <div class="col-md-8"><h4><a href="{{sample.url}}">{{sample.title}}</a></h4><p>{{ sample.description | markdownify }}</p></div>
       </div>
-      <div class="col-md-8"><h4><a href="http://praybook.xyz">Praybook</a></h4><p>{{ page.praybook_content | markdownify }}</p></div>
-      <div class="col-md-4">
-        <a href="http://reachsalem.org"><img src="/img/samples/reachsalem.jpg"/></a>
-      </div>
-      <div class="col-md-8"><h4><a href="http://reachsalem.org">Reach Salem</a></h4><p>{{ page.reachsalem_content | markdownify }}</p></div>
-      <div class="col-md-4">
-        <a href="http://rejuvenation.com"><img src="/img/samples/rejuvenation.jpg"/></a>
-      </div>
-      <div class="col-md-8"><h4><a href="http://rejuvenation.com">Rejuvenation</a></h4><p>{{ page.rejuvenation_content | markdownify }}</p></div>
+      {% endfor %}
+      
     </div>
   </div>
 </section>
