@@ -12,7 +12,7 @@ url: "http://www.yetanother.site"
 #
 # NB! Without this *nothing* will work, because it's used in every path :)
 
-# baseurl: 
+# baseurl:
 
 # Google tracking id to track your visitors
 
@@ -29,9 +29,9 @@ url: "http://www.yetanother.site"
 #############
 
 lang: "en"
-author: "Yet Another Site"
-title: "Yet Another Site"
-description: "Website hacker for hire."
+author: "Unique Advertising"
+title: "Unique Advertising"
+description: "eCommerce and website development"
 keywords: "ruby, development, agency, yet another, consultancy, design"
 favicon: "/img/favicon.ico"
 404-img: "/img/labtocat.png"
@@ -56,7 +56,7 @@ type-speed: 100
 start-delay: 200
 delete-delay: 1000
 lines: # You can add HTML Tags in the Text
-  - text: "module ApplicationHelper</br> 
+  - text: "module ApplicationHelper</br>
 <span class='code_tab' />def pb_menu_item (controller_name, path: nil, display: controller_name.capitalize)</br>
 <span class='code_2tab'/></span>path ||= send('#{controller_name.downcase}_path') </br>
 <span class='code_2tab'/>'li class='nav-item #{' active' if current_page?(path)}'></br>
@@ -152,6 +152,9 @@ syntax-highlight: True
 ############
 
 events:
+  - image: /img/business_name.png
+    date: "January 2018"
+    description: "Launched Unique Advertising"
   - image: /img/gear.png
     date: "Feburary 2016"
     description: "Launched Yet Another Site"
@@ -160,7 +163,7 @@ events:
     description: "Launched Praybook"
   - image: /img/chalkboard.png
     date: "January 2013"
-    description: "First Speaking: MongoDB" 
+    description: "First Speaking: MongoDB"
   - image: /img/red-steam.jpg
     date: "November 2011"
     description: "Learned Ruby / Rails"
