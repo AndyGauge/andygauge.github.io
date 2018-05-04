@@ -83,7 +83,7 @@ fn replace_all<P: AsRef<Path>>(s: &str, path: P) -> String {
             }
             Err(e) => {
                 error!("Error updating \"{}\", {}", playpen.link_text, e);
-                // This should make sure we include the raw `{{# ... }}` snippet
+                // This should make sure we include the raw snippet
                 // in the page content if there are any errors.
                 previous_end_index = playpen.start_index;
             }
@@ -148,9 +148,54 @@ Around the world, around the world"];
 ```
 Credit to [Daft Punk] for the excellent real world example of recursion.  
 
-## Next Steps
+### Relative Paths
 
-So The Rust Cookbook is going to depend on a newer version of mdBook to look correct.  To see the changes rendered, check it out:
+This code change worked for exactly 1 commit.  With this in hand, I was ready to deepen the implementation, and provide a subsection in the latest chapter.  This series would be summarized in a mini-contents, and that mini-contents included in the chapter, then included in the Table of Contents.
+
+Up until now, all included content had been in the same directory.  By included a file within a different directory, the preprocessor no longer could find that file's includes.
+
+```
+replaced.push_str(&replace_all(&new_content, path, &source, depth + 1));
+```
+
+By passing the path onto the method call, the base path of the included file remains the original file, not the second nested file.
+
+```
+impl<'a> LinkType<'a> {
+    fn relative_path<P: AsRef<Path>>(self, base: P) -> Option<PathBuf> {
+        let base = base.as_ref();
+        match self {
+            LinkType::Escaped => None,
+            LinkType::IncludeRange(p, _) => Some(return_relative_path(base, &p)),
+            LinkType::IncludeRangeFrom(p, _) => Some(return_relative_path(base, &p)),
+            LinkType::IncludeRangeTo(p, _) => Some(return_relative_path(base, &p)),
+            LinkType::IncludeRangeFull(p, _) => Some(return_relative_path(base, &p)),
+            LinkType::Playpen(p,_) => Some(return_relative_path(base, &p))
+        }
+    }
+}
+fn return_relative_path<P: AsRef<Path>>(base: P, relative: P) -> PathBuf {
+    base.as_ref()
+        .join(relative)
+        .parent()
+        .expect("Included file should not be /")
+        .to_path_buf()
+}
+```
+
+In this enum method, we return the parent, or directory containing, the file by joining the original path, with the path of the included file.
+
+```
+if let Some(rel_path) = playpen.link.relative_path(path) {
+      replaced.push_str(&replace_all(&new_content, rel_path, &source.to_path_buf(), depth + 1));
+}
+```
+
+Now we can safely retrieve the relative path, and pass that to the replace_all function.
+
+### Next Steps
+
+The Rust Cookbook will be split into shorter sections and to get there it will require a new version of mdBook to look correct.  Check it out here:
 
 [www.yetanother.site/rust-cookbook]
 
