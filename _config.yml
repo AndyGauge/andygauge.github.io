@@ -29,8 +29,8 @@ url: "http://www.yetanother.site"
 #############
 
 lang: "en"
-author: "Unique Advertising"
-title: "Unique Advertising"
+author: "@andygauge"
+title: "Yet Another Site"
 description: "eCommerce and website development"
 keywords: "ruby, development, agency, yet another, consultancy, design"
 favicon: "/img/favicon.ico"
@@ -154,7 +154,7 @@ syntax-highlight: True
 events:
   - image: /img/business_name.png
     date: "January 2018"
-    description: "Launched Unique Advertising"
+    description: "Launched Yet Another site"
   - image: /img/gear.png
     date: "Feburary 2016"
     description: "Launched Yet Another Site"
