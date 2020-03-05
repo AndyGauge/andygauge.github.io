@@ -46,3 +46,25 @@ render() {
     </Row>
 }
 ```
+
+The first component for Desk is the Company, which displays all of the people, places, things, and events at a customer.
+The view needs to display all of the content, but organize it so it is easy to navigate.  I chose AJAX loading to ensure
+fast page loading while supporting large datasets.  I use Bootstrap's accordian to hide these things from view by default.
+
+```javascript
+<Card className="card-collapse">
+  <Card.Header>
+    <Accordion.Toggle as={Button} variant="link" eventKey="0">
+      Contacts
+    </Accordion.Toggle>
+  </Card.Header>
+  <Accordion.Collapse eventKey="0">
+    <Card.Body>
+      {this.loadContactsFromState}
+    </Card.Body>
+  </Accordion.Collapse>
+</Card>
+```
+
+We're explicitly not doing anything dynamic yet, `{this.loadContactsFromState}` will be replaced with the contacts, but
+acts as a placeholder.  
