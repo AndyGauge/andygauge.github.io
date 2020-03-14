@@ -8,7 +8,7 @@ tags: [ '' ]
 
 Desk has tons of React in it, but how do you go from static to a fully composed React application?
 
-Desk is a Ruby application, built on top of an existing professional services applicaiton, written in Access but backed
+Desk is a Ruby application, built on top of an existing professional services application, written in Access but backed
 by SQL.  This app tracks customers, assets, and service incidents.  The web version makes it easy to quickly view
 contact info or configuration.
 
@@ -103,7 +103,8 @@ Now that the component responds to being initialized we would like to populate `
 api simply renders json contacts scoped to the customer
 
 ```ruby
-render json: Contacts.where(company: props[:id])
+@company = Company.find(props[:id])
+render json: @company.contacts
 ```
 
 So where do we make the API call from within React?  There are lifecycle hooks that are implemented to make
@@ -154,4 +155,9 @@ Now that our contacts are updated from the AJAX call, let's implement the render
 By reducing our contact objects into an html partial, we can easily create dynamic content pulled from
 our Rails app, and update it without having to return a javascript function manually manipulating the DOM.
 
+We've seen how to improve load times by pulling in dynamic data using AJAX calls that do not require our
+JavaScript to directly manipulate the DOM, and how complex interactivity can be added incrementally.  The component
+as it exists today is [on Github](https://github.com/AndyGauge/desk/blob/master/app/javascript/components/Company.js). 
+
 After a while this becomes much easier to reason about than the alternative.
+
