@@ -403,6 +403,10 @@ testing will be required.  It is important to ensure these
 major update breaks are resolved before moving to the
 next major version.
 
+## More info
+See the code on github, at [andygauge/canvas-lms]
+
 [@eileencodes]: https://eileencodes.com/
 [`ActiveRecord::MigrationContext`]: https://www.rubydoc.info/gems/activerecord/ActiveRecord/MigrationContext#initialize-instance_method
 [quickstart]: https://bundler.io/guides/bundler_2_upgrade.html
+[andygauge/canvas-lms]: https://github.com/AndyGauge/canvas-lms/pull/11
