@@ -4,11 +4,11 @@
 .col-md-4.callout-box {
   background: #EDFF31;
 }
-.col-md-4.question {
-  background: #CD4444;
+.col-md-4.question > h3{
+  color: #CD4444;
 }
-.col-md-4.answer {
-  background: #4444CD;
+.col-md-4.answer > h3 {
+  color: #4444CD;
 }
 .col-md-4.callout-box, .col-md-4.question, .col-md-4.answer {
   border: black 2px;
@@ -19,4 +19,8 @@
 }
 img.top-pad-img {
     margin-top: 30px;
+}
+
+.callout-box > h3 {
+  margin: auto;
 }
