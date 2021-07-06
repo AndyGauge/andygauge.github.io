@@ -65,7 +65,10 @@ No matter how complex the application is, ruby and rails updates can be painful.
 By tracking `:main` branch of rails, I'm hoping with incremental pain, it never
 becomes as overwhelming as [Part 1].
 
+_See the changes_ on [Github.com]
+
 [rails/rails]: https://github.com/rails/rails
 [6.0 to 6.1]: https://www.yetanother.site/rails/2021/07/04/Tracking-Rails-Main.html#moving-to-61
 [PR]: https://github.com/heartcombo/devise/pull/5357
 [Part 1]: https://www.yetanother.site/rails/2021/07/04/Tracking-Rails-Main.html
+[Github.com]: https://github.com/AndyGauge/desk/pull/59
