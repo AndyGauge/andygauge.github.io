@@ -152,14 +152,14 @@ syntax-highlight: True
 ############
 
 events:
-  - image: /img/security.png
+  - image: /img/onguard.png
     date: "January 2020"
-    description: "Began On Guard Security"
+    description: "Developed On Guard Security Training"
   - image: /img/business_name.png
     date: "January 2018"
-    description: "Launched Unique Ad"
+    description: "Acquired Unique Advertising"
   - image: /img/gear.png
-    date: "Feburary 2016"
+    date: "February 2016"
     description: "Launched Yet Another Site"
   - image: /img/prayer-beads.png
     date: "October 2015"
