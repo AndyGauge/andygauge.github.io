@@ -216,7 +216,12 @@ next major version.
 ## More info
 See the code on github, at [andygauge/canvas-lms]
 
+## Part 2: actually tracking rails main
+[Next] we move from 6.0 to main on a smaller app before undertaking
+this major change.
+
 [@eileencodes]: https://eileencodes.com/
 [`ActiveRecord::MigrationContext`]: https://www.rubydoc.info/gems/activerecord/ActiveRecord/MigrationContext#initialize-instance_method
 [quickstart]: https://bundler.io/guides/bundler_2_upgrade.html
 [andygauge/canvas-lms]: https://github.com/AndyGauge/canvas-lms/pull/11
+[Next]: https://www.yetanother.site/rails/2021/07/06/Tracking-Rails-Main-Part-2.html
