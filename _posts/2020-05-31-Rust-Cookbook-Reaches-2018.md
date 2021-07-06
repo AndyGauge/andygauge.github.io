@@ -17,6 +17,7 @@ simplified that process by removing this requirement.
 
 Big shout out to [pickfire] for automating the changes required
 to all the recipes.  Here's a peek at what he used:
+
 ```bash
 sed -i '/extern crate/ {N;s/\n$//}' src/**.md; sed -i 's/extern crate error_chain;/use error_chain::error_chain;/; s/extern crate lazy_static;/use lazy_static::lazy_static;/; s/extern crate bitflags;/use bitflags::bitflags;/; s/extern crate serde_json;/ use serde_json::json;/; s/extern crate serde_derive;/use serde::{Serialize, Deserialize};/; /macro_use/d; /extern crate/ d; s/```rust/```rust,edition2018/; s/bail!/error_chain::&/; s/\(debug\|info\|warn\|error\)!/log::&/;' src/**.md
 ```
