@@ -3,7 +3,7 @@ layout: post
 section-type: post
 title: Rust Cookbook Reorganization
 category: Rust
-tags: [ 'mdbook', 'rust' ]
+tags: [ 'mdbook']
 ---
 
 In April, I took on a role of collaborator on [The Rust Cookbook].  The Cookbook is a collection of examples that demonstrate some of the crate ecosystem with real world examples.  
