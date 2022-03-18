@@ -71,5 +71,6 @@ heroku config:set ELASTICSEARCH_URL7=connection_string --app=app
 ```
 
 Now if we only all of the deployed instances shared a color maybe this could be easier?
-
+It sure was convenient that it restarted all the existing apps as it went, reporting status
+of each on output.
 
