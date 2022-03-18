@@ -6,7 +6,12 @@ category: ElasticSearch
 tags: [ '' ]
 ---
 
-While upgrading to Elastic Search 7 we needed to upgrade our heroku environments.
+While upgrading to Elastic Search 7 we needed to upgrade our heroku environments.  We manage
+multiple heroku environments for each of our teams, and manually updating each environment
+is prone to errors and can be tedious.  We deploy and set environment variables is this scripting
+exercise.
+
+Uses `awk`, `grep`, `ruby` and compares some of the string manipulation of each
 
 ```
 heroku addons --all | awk ' /bonsai:standard-sm/ {print $1}' | while read line
