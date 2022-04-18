@@ -27,6 +27,9 @@ that we track main (see last 2-3 posts about joining
 pre-release and be as cool as Github also), we find
 the bump to 7 includes [new javascript options](https://medium.com/signal-v-noise/stimulus-1-0-a-modest-javascript-framework-for-the-html-you-already-have-f04307009130).
 
+For context, 7 is general available as of Jan 6, no news about 7.1.0.aplha release
+timeline, but Mar 8, 7.0.2.3 is the latest in `7.X`.
+
 #### Stimulus
 
 chat it up with [Hotwire](https://discuss.hotwired.dev)
@@ -59,7 +62,7 @@ export default class extends Controller {
 We want the app to initialize by calling some function 
 that will grab from the API (which currently resolves to
 a javascript `respond_to` block).  To keep things simple,
-the controller gets `respond_to { |res| res.html }` and
+the controller gets `format.html { render layout: false }` and
 a view file ending in `.html.erb` with similar contents
 to the `js`:
 
@@ -122,6 +125,11 @@ And extend our `fetchCloud()`
 ```
 This time we are customizing the API call by passing
 in the namespace we stored on the rendered partial.
+
+Beneath the tabs, render the output with:
+```html
+<div class="selectedNamespace" data-dashboard-target="selected"></div>
+```
 
 Being a very simple application, stimulus orchestrates a pattern
 that is easy to maintain.
