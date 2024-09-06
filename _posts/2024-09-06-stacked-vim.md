@@ -57,7 +57,7 @@ search.
 nnoremap <leader>s :RgV<Cr>
 ```
 
-<img src="/img/rgV.png" />
+<img src="/img/rgv.png" />
 
 ## Ack
 
