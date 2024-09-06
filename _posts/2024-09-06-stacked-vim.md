@@ -35,6 +35,13 @@ any good examples of people setting up vim like a piece of
 paper, ranging in the 1:1 through 1:2 ratio of columns to
 rows.
 
+With a simple configuration for the window will stack
+the results with the preview taking up the majority of the view.
+
+```
+let g:fzf_preview_window = 'up:60%'
+```
+
 Before sharing the .vimrc that solves this, the best
 resource for writing these turns out to be the [fzf.vim file](https://github.com/junegunn/fzf.vim/blob/c5ce7908ee86af7d4090d2007086444afb6ec1c9/plugin/fzf.vim).  Copying
 the lines and extending them are the best way to write
@@ -97,25 +104,26 @@ terminals can be copied below.
 ```
 " Search RipGrep preview fit for vertical window"
 let g:fzf_layout = { 'tmux': '20%,80%' }
+
+# Always show stacked vim
+let g:fzf_preview_window = 'up:60%'
 nnoremap <leader>s :RgV<Cr>
 nnoremap <leader>S :AgV <Cr>
-
-" Map fzf search to space space
+nnoremap <leader>bb :Buffers<CR>
 nnoremap <leader><leader> :FilesV<Cr>
 
+# RipGrep vertical command
 command! -bang -nargs=* RgV
   \ call fzf#vim#grep('rg --column --no-heading --line-number --color=always '.shellescape(<q-args>),
   \ 1,
   \ fzf#vim#with_preview('up:60%'),
   \ <bang>0)
 
+# Silver Search vertical preview
 command! -bang -nargs=* AgV
       \ call fzf#vim#ag(<q-args>,
       \ fzf#vim#with_preview('up:60%'),
       \ <bang>0)
-
-command!      -bang -nargs=? -complete=dir FilesV
-  \ call fzf#vim#files(<q-args>, fzf#vim#with_preview('up:60%'), <bang>0)
 
 " Ack tricks
 function Search(string) abort
@@ -129,9 +137,6 @@ function Search(string) abort
 endfunction
 let g:ackprg = 'rg --vimgrep --smart-case --hidden'
 " Any empty ack search will search for the work the cursor is on
-let g:ack_use_cword_for_empty_search = 1
-nmap <leader>/ :call Search("")<left><left>
-nmap <leader>* :call Search("<cword>")<CR>
 ```
 
 Please let me know what has made your vim experience better.
