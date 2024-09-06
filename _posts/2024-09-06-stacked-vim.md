@@ -3,7 +3,7 @@ layout: post
 section-type: post
 title: stacked vim
 category: vim
-tags: [ 'accessibility', 'fzf' ]
+tags: [ 'accessibility', 'fzf', 'ack' ]
 ---
 
 Getting a 16 inch screen with more pixels than a 4k
@@ -57,6 +57,10 @@ search.
 nnoremap <leader>s :RgV<Cr>
 ```
 
+<img src="/img/rgV.png" />
+
+## Ack
+
 fzf is a great tool, but with another tool we can have the
 output of rip-grep displayed in a separate split window
 and by using inline preview after the file name and line
@@ -84,6 +88,8 @@ vi exits.
 ```
 let g:ackprg = 'rg --vimgrep --smart-case --hidden'
 ```
+
+<img src="/img/ackv.png" />
 
 The entire search functionality for paged looking vim
 terminals can be copied below.
