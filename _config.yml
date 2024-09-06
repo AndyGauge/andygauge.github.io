@@ -187,8 +187,6 @@ email: "us@yetanother.site"
 ##################
 
 social:
-  - title: "twitter"
-    url: "https://twitter.com/andygauge"
   - title: "github"
     url: "https://github.com/andygauge"
   - title: "rss"
