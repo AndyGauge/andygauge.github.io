@@ -25,8 +25,9 @@ an external monitor.
 Now, engineering gets a standard model (which is smart
 from an IT management perspective 👏) but in order to
 adjust to the extra space, I'm putting my code and work
-side by side, which gives me about 60 characters to view
-vim inside warp.
+side by side, which allows me to enforce an 80 column width by
+setting my screen width to allow 80 characters wide when the vim-gitgutter
+is tracking changes.
 
 One struggle with fzf is the expectation for width not
 height.  Using a preview window side by side full screen
