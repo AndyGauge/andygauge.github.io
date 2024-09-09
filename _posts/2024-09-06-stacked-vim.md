@@ -67,6 +67,18 @@ nnoremap <leader>s :RgV<Cr>
 
 <img src="/img/rgv.png" />
 
+## The Silver Searcher
+
+[ag](https://geoff.greer.fm/ag/) can be installed on a mac with
+[brew](https://formulae.brew.sh/formula/the_silver_searcher).  From the cli
+```
+brew install the_silver_searcher
+```
+
+`Ag` produces different results, however, using the `let g:fzf_preview_window = 'up:60%'` is all that is needed to use the silver searcher.
+
+<img src="/img/agv.png" />
+
 ## Ack
 
 fzf is a great tool, but with another tool we can have the
