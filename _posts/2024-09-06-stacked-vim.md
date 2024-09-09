@@ -105,21 +105,21 @@ terminals can be copied below.
 " Search RipGrep preview fit for vertical window"
 let g:fzf_layout = { 'tmux': '20%,80%' }
 
-# Always show stacked vim
+" Always show stacked vim"
 let g:fzf_preview_window = 'up:60%'
 nnoremap <leader>s :RgV<Cr>
 nnoremap <leader>S :AgV <Cr>
 nnoremap <leader>bb :Buffers<CR>
 nnoremap <leader><leader> :FilesV<Cr>
 
-# RipGrep vertical command
+" RipGrep vertical command"
 command! -bang -nargs=* RgV
   \ call fzf#vim#grep('rg --column --no-heading --line-number --color=always '.shellescape(<q-args>),
   \ 1,
   \ fzf#vim#with_preview('up:60%'),
   \ <bang>0)
 
-# Silver Search vertical preview
+" Silver Search vertical preview"
 command! -bang -nargs=* AgV
       \ call fzf#vim#ag(<q-args>,
       \ fzf#vim#with_preview('up:60%'),
