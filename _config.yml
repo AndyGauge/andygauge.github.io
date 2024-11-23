@@ -31,8 +31,8 @@ url: "http://www.yetanother.site"
 lang: "en"
 author: "@andygauge"
 title: "Yet Another Site"
-description: "eCommerce and website development"
-keywords: "ruby, development, agency, yet another, consultancy, design"
+description: "emerging technolog for public good"
+keywords: "ruby, development, agency, yet another site, yas, consultancy, design, LLM, government, npo, foundation"
 favicon: "/img/favicon.ico"
 404-img: "/img/labtocat.png"
 
@@ -152,6 +152,9 @@ syntax-highlight: True
 ############
 
 events:
+  - image: /img/npo.png
+    date: "January 2025"
+    description: "Foundation Focus"
   - image: /img/onguard.png
     date: "January 2020"
     description: "Developed On Guard Security Training"
