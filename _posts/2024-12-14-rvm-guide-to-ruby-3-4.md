@@ -16,19 +16,23 @@ Seriously.  Now is the time.  Why are you using rvm?  There's been a lot of stru
 with rvm and it's time to move on.  After reloading your shell remove the remnants
 in ~/.bash_profile
 
-Follow [asdf](https://asdf-vm.com/guide/getting-started.html) instructions, 
+Follow [asdf](https://asdf-vm.com/guide/getting-started.html) instructions,
 get node installed, then set up ruby.
+
+In this case, we have a bad homebrew asdf installation so using the preferred git
+workflow, and need to upgrade our xcode tools.
 
 ```bash
 brew install coreutils curl git
-brew install asdf
+mv ~/.asdf ~/.asdf-bad
+git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.14.1
 brew install gpg gawk
 asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
 asdf install nodejs latest
 asdf plugin add ruby https://github.com/asdf-vm/asdf-ruby.git
 sudo rm -rf /Library/Developer/CommandLineTools
 sudo xcode-select --install
-asdf install ruby-3.4.0-rc1
+asdf install ruby 3.4.0-rc1
 ```
 
 Also set up the shims for ~/.bash_profile following asdf instructions.
