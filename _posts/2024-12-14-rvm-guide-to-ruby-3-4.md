@@ -40,3 +40,17 @@ Also set up the shims for ~/.bash_profile following asdf instructions.
 ```
 . "$HOME/.asdf/asdf.sh"
 ```
+
+# CSV
+
+My app failed to boot with ruby 3.4 and the offence was
+
+```ruby
+require 'csv'
+```
+
+To account for both 3.4 and 3.5 deprecations the following adds the necessary gems
+
+```
+bundle add csv ostruct logger rackup
+```
