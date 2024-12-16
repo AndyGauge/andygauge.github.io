@@ -2,7 +2,7 @@
 layout: post
 section-type: post
 title: 'Rust Cookbook Reach 2018'
-category: Rust
+category: rustacean
 tags: [ '' ]
 ---
 

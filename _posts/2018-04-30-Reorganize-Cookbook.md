@@ -2,7 +2,7 @@
 layout: post
 section-type: post
 title: Rust Cookbook Reorganization
-category: Rust
+category: rustacean
 tags: [ 'mdbook']
 ---
 

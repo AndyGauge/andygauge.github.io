@@ -2,7 +2,7 @@
 layout: post
 section-type: post
 title: Lazy Static replacement in the standard library
-category: rust
+category: rustacean
 tags: [ '2024' ]
 ---
 
