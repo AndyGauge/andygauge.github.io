@@ -44,6 +44,16 @@ I initially used Gemini extensively but hit credit limits. Sonnet 4 became my ne
 
 The cost savings are significant for daily use, and Sonnet 4's performance has been excellent for my coding tasks. The ability to switch models without changing workflows is a key advantage of Cursor's architecture.
 
+## Multi-Window, Multi-Repository Workflow
+
+The real breakthrough came when I started using multiple Cursor windows across different repositories. Being able to paste context back and forth between projects has been transformative for fixing upstream issues.
+
+A perfect example was struggling with Rust skeptic rlib dependency issues. I had been banging my head against the wall for days, but when I opened skeptic in one window and my project in another, letting them communicate through shared context, suddenly 10 tests passed. The biggest struggle resolved itself through this cross-repository collaboration.
+
+However, discovering the real problem with the rlibs revealed a performance regression that would've made the test suite take hours to run. The AI's initial enthusiasm about the "success" needed my discerning navigator eye to catch this critical issue. When I asked for a 1000x performance improvement, it responded with a 100x - but that was enough to make specs run in under a second. The resulting [pull request](https://github.com/budziq/rust-skeptic/pull/143) addressed the rlib issues that were causing multiple versions and test failures in the cookbook.
+
+This workflow pattern has become my go-to approach for complex dependency and integration issues.
+
 ## Lessons Learned
 
 **Clear context is crucial**: The better I explain the problem and desired outcome, the more useful the AI's suggestions.
@@ -53,5 +63,9 @@ The cost savings are significant for daily use, and Sonnet 4's performance has b
 **Iterate quickly**: Don't try to get the perfect solution in one go. Use AI to generate options, then refine based on experience.
 
 **Leverage your expertise**: My background in coaching learning engineers translates well to guiding AI - clear objectives, constructive feedback, and iterative improvement.
+
+**Cross-repository context sharing**: Multiple windows with different codebases can solve problems that seem intractable in isolation.
+
+**Stay skeptical of AI optimism**: Don't let the AI's positive vibes cloud your judgment. Keep your discerning navigator eye sharp for performance regressions and hidden issues that initial "successes" might mask.
 
 Cursor has become an essential tool in my development workflow, not as a replacement for programming skills, but as a force multiplier that lets me focus on what humans do best: understanding problems, making decisions, and creating value. 
