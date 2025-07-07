@@ -30,13 +30,13 @@ This frees up mental energy for the creative aspects of problem-solving and syst
 
 ## The Rust Cookbook Fix
 
-A perfect example was updating the Rust Cookbook to use `LazyLock` instead of the deprecated `lazy_static!` macro. Cursor helped me:
-- Identify all instances of the old pattern
-- Generate the new `LazyLock` implementations
-- Update related imports and dependencies
-- Ensure the changes maintained the same functionality
+A perfect example was fixing the Rust Cookbook's failing build. The project had multiple issues: replacing `error-chain` with `anyhow`, fixing lychee config issues, and patching skeptic to handle rlibs better. Cursor helped me:
+- Systematically identify and replace deprecated error handling patterns
+- Update link checker configurations
+- Navigate complex dependency resolution issues
+- Coordinate fixes across multiple interconnected systems
 
-What would have been a day of careful manual updates became a focused afternoon of review and refinement.
+What would have been weeks of careful manual debugging became a focused effort that resulted in a [green build](https://github.com/rust-lang-nursery/rust-cookbook/pull/730).
 
 ## Model Transition: Gemini to Sonnet 4
 
