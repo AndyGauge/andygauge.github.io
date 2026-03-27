@@ -1,17 +1,66 @@
 
-<!-- Intro Start -->
+<!-- Hero Section Start -->
 
-<header class="intro">
-  <div class="intro-body">
-    <div class="container">
-      <div class="row">
-          <div class="col-md-10 col-md-offset-1">
-            <span class="intro-text">{{ content }}</span>
-            <h5>&nbsp;</h5>
-          </div>
+<header id="page-top" class="relative bg-github-bg border-b border-github-border">
+  <div class="container-custom py-16 md:py-24">
+    <div class="max-w-4xl mx-auto text-center">
+      <!-- Profile Image -->
+      {% if site.me-img %}
+      <div class="mb-8">
+        <img src="{{site.baseurl}}/{{ site.me-img }}" alt="{{ site.author }}" class="w-24 h-24 md:w-32 md:h-32 rounded-full mx-auto border-2 border-github-border shadow-github">
+      </div>
+      {% endif %}
+      
+      <!-- Main Heading -->
+      <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-github-text mb-4">
+        {{ site.title }}
+      </h1>
+      
+      <!-- Subtitle -->
+      <p class="text-lg md:text-xl text-github-text-secondary mb-8 max-w-2xl mx-auto leading-relaxed">
+        {{ site.description }}
+      </p>
+      
+      <!-- Animated Typing Text -->
+      {% if site.dynamic-typing %}
+      <div class="mb-8">
+        <div class="code-block max-w-4xl mx-auto">
+          <span id="typed-text" class="mastodon-accent"></span>
+          <span class="typed-cursor mastodon-accent">|</span>
         </div>
+      </div>
+      {% endif %}
+      
+      <!-- CTA Buttons -->
+      <div class="flex flex-col sm:flex-row gap-3 justify-center items-center">
+        <a href="#intro" class="btn-primary">
+          <i class="fas fa-arrow-down mr-2"></i>
+          Explore My Work
+        </a>
+        <a href="#contact" class="btn-outline">
+          <i class="fas fa-envelope mr-2"></i>
+          Get In Touch
+        </a>
+      </div>
+      
+      <!-- Social Links -->
+      {% if site.social %}
+      <div class="mt-8 flex justify-center space-x-4">
+        {% for social in site.social %}
+        <a href="{{ social.url }}" class="text-github-text-muted hover:text-github-accent transition-colors" aria-label="{{ social.title }}">
+          {% if social.title == "github" %}
+            <i class="fab fa-github text-xl"></i>
+          {% elsif social.title == "rss" %}
+            <i class="fas fa-rss text-xl"></i>
+          {% else %}
+            <i class="fab fa-{{ social.title }} text-xl"></i>
+          {% endif %}
+        </a>
+        {% endfor %}
+      </div>
+      {% endif %}
     </div>
   </div>
 </header>
 
-<!-- Intro End -->
+<!-- Hero Section End -->

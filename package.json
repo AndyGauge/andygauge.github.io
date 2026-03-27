@@ -1,0 +1,13 @@
+{
+  "name": "andygauge.github.io",
+  "version": "1.0.0",
+  "description": "Andrew Gauger's personal website",
+  "scripts": {
+    "build-css": "tailwindcss -i ./src/input.css -o ./css/tailwind.css --watch",
+    "build-css-prod": "tailwindcss -i ./src/input.css -o ./css/tailwind.css --minify"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.0",
+    "@tailwindcss/typography": "^0.5.10"
+  }
+}

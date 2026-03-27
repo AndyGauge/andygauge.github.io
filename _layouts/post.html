@@ -6,36 +6,60 @@
 
   {% include head.html %}
 
-  <body>
+  <body class="bg-github-bg text-github-text">
 
     {% include navigation.html %}
 
-    <section id="post" class="container content-section">
-      <div class="row">
-        <div class="col-md-10 col-md-offset-1 post-body">
+    <main class="pt-16">
+      <article class="container-custom py-8">
+        <div class="max-w-4xl mx-auto">
+          <!-- Post Header -->
+          <header class="mb-8">
+            <h1 class="text-3xl md:text-4xl font-bold text-github-text mb-4">{{ page.title }}</h1>
+            
+            <div class="flex flex-wrap items-center gap-4 text-sm text-github-text-muted mb-6">
+              <time datetime="{{ page.date | date_to_xmlschema }}">
+                <i class="fas fa-calendar mr-1"></i>
+                {{ page.date | date_to_string }}
+              </time>
+              
+              {% if page.category %}
+              <span>
+                <i class="fas fa-folder mr-1"></i>
+                {{ page.category }}
+              </span>
+              {% endif %}
+              
+              {% if page.tags %}
+              <div class="flex flex-wrap gap-1">
+                {% for tag in page.tags %}
+                  <a href="{{site.baseurl}}/tags/{{tag}}.html" class="badge-primary">
+                    #{{ tag }}
+                  </a>
+                {% endfor %}
+              </div>
+              {% endif %}
+            </div>
+          </header>
 
-          <h1><strong>{{ page.title }}</strong></h1>
-          <h4><strong>{{ page.date | date_to_string }}</strong>
-            <small> . {{ page.category }} . <a href="{{site.baseurl}}{{page.url }}#disqus_thread">Comments</a>
-            {% for tag in page.tags %}
-              <a href="{{site.baseurl}}/tags/{{tag}}.html">#{{ tag }}</a>
-            {% endfor %}
-            </small>
-          </h4>
+          <!-- Post Content -->
+          <div class="prose prose-lg max-w-none">
+            {{ page.content | markdownify }}
+          </div>
 
-          {{ page.content | markdownify }}
+          <!-- Post Footer -->
+          <footer class="mt-12 pt-8 border-t border-github-border">
+            {% include share.html %}
 
-          {% include share.html %}
+            {% if jekyll.environment == "production" %}
+              {% include comments.html %}
+            {% endif %}
 
-          {% if jekyll.environment == "production" %}
-            {% include comments.html %}
-          {% endif %}
-
-          {% include social-buttons.html %}
-
+            {% include social-buttons.html %}
+          </footer>
         </div>
-      </div>
-    </section>
+      </article>
+    </main>
 
     {% include footer.html %}
 

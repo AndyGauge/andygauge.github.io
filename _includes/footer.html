@@ -1,12 +1,31 @@
 
- <!-- Footer Start -->
+<!-- Footer Start -->
 
-<footer>
-    <div class="container text-center">
-      <p>Copyright &copy; {{ site.author }} {{ site.time | date: "%Y" }}</p>
+<footer class="bg-github-bg border-t border-github-border">
+  <div class="container-custom py-8">
+    <div class="flex flex-col md:flex-row items-center justify-between">
+      <div class="text-github-text-muted text-sm mb-4 md:mb-0">
+        Copyright &copy; {{ site.author }} {{ site.time | date: "%Y" }}
+      </div>
+      
+      <!-- Social Links -->
+      {% if site.social %}
+      <div class="flex space-x-4">
+        {% for social in site.social %}
+        <a href="{{ social.url }}" class="text-github-text-muted hover:text-github-accent transition-colors" aria-label="{{ social.title }}">
+          {% if social.title == "github" %}
+            <i class="fab fa-github text-lg"></i>
+          {% elsif social.title == "rss" %}
+            <i class="fas fa-rss text-lg"></i>
+          {% else %}
+            <i class="fab fa-{{ social.title }} text-lg"></i>
+          {% endif %}
+        </a>
+        {% endfor %}
+      </div>
+      {% endif %}
     </div>
+  </div>
 </footer>
-
-<p><br><br><br><br><br><br></p>
 
 <!-- Footer End -->
