@@ -3,7 +3,7 @@
 
 # NB! Set your site's url, otherwise stuff will break :)
 
-url: "https://andygauge.github.io/"
+url: "https://andygauge.github.io"
 
 # If you're hosting your site at a Project repository on GitHub pages
 # (https://yourusername.github.io/repository-name)
@@ -30,9 +30,9 @@ url: "https://andygauge.github.io/"
 
 lang: "en"
 author: "@andygauge"
-title: "Yet Another Site"
-description: "emerging technolog for public good"
-keywords: "ruby, development, agency, yet another site, yas, consultancy, design, LLM, government, npo, foundation"
+title: "andygauge"
+description: "emerging technology for public good"
+keywords: "ruby, development, consultancy, design, LLM, government, npo, foundation"
 favicon: "/img/favicon.ico"
 404-img: "/img/labtocat.png"
 
@@ -102,7 +102,7 @@ func (s *SlackAPI) SendToSlack() error {</br>
 <span class='code_3tab'/>return errors.New(jsonerr.(string)) }</br>
 <span class='code_tab'/>} else { return err }</br>
 <span class='code_tab'/>return nil }"
-me-img: 'img/me-dark.jpg'
+# me-img: 'https://www.gravatar.com/avatar/060731280703cb6c69bff0df57eb8898?s=200&d=mp'
 ##############################
 # Color the browser elements #
 ##############################
@@ -152,9 +152,6 @@ syntax-highlight: True
 ############
 
 events:
-  - image: /img/npo.png
-    date: "January 2025"
-    description: "Foundation Focus"
   - image: /img/onguard.png
     date: "January 2020"
     description: "Developed On Guard Security Training"
@@ -163,7 +160,7 @@ events:
     description: "Acquired Unique Advertising"
   - image: /img/gear.png
     date: "February 2016"
-    description: "Launched Yet Another Site"
+    description: "Launched andygauge"
   - image: /img/prayer-beads.png
     date: "October 2015"
     description: "Launched Praybook"
@@ -173,6 +170,15 @@ events:
   - image: /img/red-steam.jpg
     date: "November 2011"
     description: "Learned Ruby / Rails"
+  - image: /img/londonbridge.jpeg
+    date: "2001"
+    description: "Desert Technologies High School Junior Administrator, Lake Havasu City AZ"
+  - image: /img/londonbridge.jpeg
+    date: "2000"
+    description: "Multi-Network Solutions, Lake Havasu City"
+  - image: /img/londonbridge.jpeg
+    date: "1999"
+    description: "Webmaster Chamber of Commerce Lake Havasu City, AZ"
 
 # First image of the Timeline
 
@@ -182,7 +188,7 @@ timeline-img: "/img/typewriter.jpg"
 # Contact #
 ###########
 
-email: "us@yetanother.site"
+email: "andygauge@gmail.com"
 
 
 ##################
@@ -216,7 +222,7 @@ pages_list:
 
 # Exclusion list from the generated _site
 
-exclude: ["LICENSE", "README.md", "CONTRIBUTING", "CONTRIBUTORS", "scripts"]
+exclude: ["LICENSE", "README.md", "CONTRIBUTING", "CONTRIBUTORS", "scripts", "node_modules", "package.json", "package-lock.json", "tailwind.config.js", "src", ".tool-versions"]
 
 # Pagination path
 
@@ -227,5 +233,5 @@ paginate_path: "blog/page:num/"
 sass:
   style: compressed
 
-gems:
+plugins:
   - jekyll-paginate

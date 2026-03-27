@@ -6,32 +6,29 @@
 
   {% include head.html %}
 
-  <body>
+  <body class="bg-github-bg text-github-text">
 
     {% include navigation.html %}
 
-    <section id="page" class="container content-section text-center">
+    <main class="pt-16">
+      <div class="container-custom py-8">
+        <div class="max-w-3xl mx-auto">
 
-      <div class="row">
-        <div class="col-md-10 col-md-offset-1 col-xs-10 col-xs-offset-1">
+          {% include swipe-instructions.html %}
 
-        {% include swipe-instructions.html %}
+          {{ page.content | markdownify }}
 
-        {{ page.content | markdownify }}
+          <div class="space-y-4">
+            {% for post in paginator.posts %}
+              {% include post-list.html %}
+            {% endfor %}
+          </div>
 
-        <div>
-          {% for post in paginator.posts %}
-            {% include post-list.html%}
-          {% endfor %}
-        </div>
-
-        {% include pagination.html %}
-
-        {% include social-buttons.html %}
+          {% include pagination.html %}
 
         </div>
       </div>
-    </section>
+    </main>
 
     {% include footer.html %}
 

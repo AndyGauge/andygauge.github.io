@@ -6,7 +6,7 @@
 
   {% include head.html %}
 
-  <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top"  data-offset="151">
+  <body class="bg-github-bg text-github-text">
 
     {% include navigation.html %}
 
@@ -21,7 +21,9 @@
         {% endif %}
       {% endfor %}
       {% if p[1] == 'faq' %}
-        <img src="img/railway.jpg" style="width:100%"/>
+        <div class="container-custom py-8">
+          <img src="img/railway.jpg" alt="Railway" class="w-full rounded-lg shadow-github"/>
+        </div>
       {% endif %}
     {% endfor %}
 

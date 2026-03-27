@@ -1,10 +1,18 @@
 
 <!-- Social Buttons Start -->
 
-<ul class="list-inline social-buttons">
+<div class="flex justify-center space-x-4">
   {% for network in site.social %}
-    <li><a href="{{ network.url }}" target="_blank"><i class="fa fa-{{ network.title }} fa-fw"></i></a></li>
+    <a href="{{ network.url }}" target="_blank" class="text-github-text-muted hover:text-github-accent transition-colors" aria-label="{{ network.title }}">
+      {% if network.title == "github" %}
+        <i class="fab fa-github text-2xl"></i>
+      {% elsif network.title == "rss" %}
+        <i class="fas fa-rss text-2xl"></i>
+      {% else %}
+        <i class="fab fa-{{ network.title }} text-2xl"></i>
+      {% endif %}
+    </a>
   {% endfor %}
-</ul>
+</div>
 
 <!-- Social Buttons End -->

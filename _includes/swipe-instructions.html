@@ -1,25 +1,21 @@
 
 <!-- Swipe Instructions Start -->
 
-<div id="swipe-instruction">
-  <div>
-    <p><br><br><br></p>
-    <i id="hand-swipe" class="fa fa-hand-o-up"></i>
-    <p><strong>
+<div id="swipe-instruction" class="hidden text-center py-4 mb-6 bg-github-bg-secondary rounded-lg">
+  <p class="text-sm text-github-text-secondary mb-2">
     {% if page.section-type == "blog" %}
       Did you know that you can navigate the archive pages by swiping left and right?
     {% elsif page.section-type == "post" %}
       Did you know that you can navigate the posts by swiping left and right?
     {% endif %}
-    </strong></p>
-    <button type="button" class="btn btn-default ok-btn close-swipe-instruction">
-      {% if page.section-type == "blog" %}
-        Got it!
-      {% elsif page.section-type == "post" %}
-        Awesome!
-      {% endif %}
-    </button>
-  </div>
+  </p>
+  <button type="button" class="close-swipe-instruction text-xs font-medium text-github-accent hover:underline">
+    {% if page.section-type == "blog" %}
+      Got it!
+    {% elsif page.section-type == "post" %}
+      Awesome!
+    {% endif %}
+  </button>
 </div>
 
 <!-- Swipe Instructions End -->

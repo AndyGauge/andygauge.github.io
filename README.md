@@ -78,17 +78,76 @@ The theme contains documentation in the form of [blog posts](https://panossakkos
 
 ## How to run locally
 
-First, you need to install jekyll and the dependencies of { Personal } by running:
+This site has been modernized with **Tailwind CSS** and **GitHub-inspired styling**. Here's how to get it running locally:
 
-````
-./scripts/install
-````
+### Prerequisites
+- **asdf** version manager (recommended) or manual Ruby/Node.js installation
+- **Ruby** 3.2.0 (specified in `.tool-versions`)
+- **Node.js** 20.11.0 (specified in `.tool-versions`)
 
-Then, you can build and serve your website by simply running:
+### Installation Steps
 
-````
-./scripts/serve-production
-````
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/andygauge/andygauge.github.io.git
+   cd andygauge.github.io
+   ```
+
+2. **Install Ruby and Node.js versions (if using asdf):**
+   ```bash
+   asdf install
+   ```
+
+3. **Install Ruby dependencies:**
+   ```bash
+   bundle install
+   ```
+
+4. **Install Node.js dependencies:**
+   ```bash
+   npm install
+   ```
+
+5. **Build Tailwind CSS:**
+   ```bash
+   npm run build-css-prod
+   ```
+
+6. **Start the Jekyll development server:**
+   ```bash
+   bundle exec jekyll serve
+   ```
+
+7. **Open your browser:**
+   Navigate to `http://localhost:4000`
+
+### Development Workflow
+
+**For CSS changes:**
+- Edit files in `src/input.css` or `tailwind.config.js`
+- Run `npm run build-css` to watch for changes, or
+- Run `npm run build-css-prod` for production build
+
+**For content changes:**
+- Edit Jekyll files (`.md`, `.html`, `_config.yml`)
+- Jekyll will auto-reload on changes
+
+### Available Scripts
+
+- `npm run build-css` - Build Tailwind CSS in watch mode
+- `npm run build-css-prod` - Build minified Tailwind CSS for production
+- `bundle exec jekyll serve` - Start Jekyll development server
+- `bundle exec jekyll build` - Build the site for production
+
+### Site Features
+
+- **GitHub-inspired design** with clean, modern styling
+- **Tailwind CSS** for utility-first styling
+- **Mastodon accent colors** for visual interest
+- **Responsive design** that works on all devices
+- **Construction documentation** with photo placeholders
+- **Blog functionality** with syntax highlighting
+- **Timeline feature** for project milestones
 
 ## Wiki
 

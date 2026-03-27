@@ -1,15 +1,17 @@
 
 <!-- Post List Start -->
 
-<h4 align="left">
-  <strong>{{ post.date | date_to_string }}</strong>
-  <small>. {{ post.category }} .</small>
-  <br class="visible-xs-block">
-  <a href="{{site.baseurl}}{{post.url}}">
-    <strong>{{ post.title }}</strong>
-  </a>
-  <br class="visible-xs-block">
-  <small><a href="{{site.baseurl}}{{post.url}}#disqus_thread">Comments</a></small>
-</h4>
+<article class="card-hover p-5">
+  <div class="flex items-center gap-3 mb-2">
+    <time class="text-sm font-semibold text-github-accent">{{ post.date | date_to_string }}</time>
+    {% if post.category and post.category != "" %}
+      <span class="text-xs px-2 py-0.5 rounded-full bg-github-bg-secondary text-github-text-muted">{{ post.category }}</span>
+    {% endif %}
+  </div>
+  <h3 class="text-lg font-bold mb-1">
+    <a href="{{site.baseurl}}{{post.url}}" class="text-github-text hover:text-github-accent transition-colors">{{ post.title }}</a>
+  </h3>
+  <a href="{{site.baseurl}}{{post.url}}#disqus_thread" class="text-xs text-github-text-muted hover:text-github-accent transition-colors">Comments</a>
+</article>
 
 <!-- Post List End -->

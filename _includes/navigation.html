@@ -1,54 +1,78 @@
 
 <!-- Navigation Start -->
 
-<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-        <i class="fa fa-bars"></i>
-      </button>
-      {% if page.section-type == "index" %}
-        <a class="navbar-brand page-scroll" href="#page-top">
-      {% else %}
-        <a class="navbar-brand" href="{{site.baseurl}}/">
-      {% endif %}
-          <div>
-            {% if site.black-favicon %}
-              <img src="{{site.baseurl}}{{ site.black-favicon }}" alt="">
-            {% endif %}
-            {{ site.title }}
-          </div>
-        </a>
-    </div>
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-      <ul class="nav navbar-nav">
+<nav class="fixed top-0 left-0 right-0 z-50 bg-github-bg border-b border-github-border shadow-github">
+  <div class="container-custom">
+    <div class="flex items-center justify-between h-16">
+      <!-- Logo -->
+      <div class="flex items-center">
         {% if page.section-type == "index" %}
+          <a class="flex items-center space-x-3 text-lg font-semibold text-github-text hover:text-github-accent transition-colors" href="#page-top">
+        {% else %}
+          <a class="flex items-center space-x-3 text-lg font-semibold text-github-text hover:text-github-accent transition-colors" href="{{site.baseurl}}/">
+        {% endif %}
+          {% if site.black-favicon %}
+            <img src="{{site.baseurl}}{{ site.black-favicon }}" alt="" class="w-8 h-8 rounded">
+          {% endif %}
+          <span>{{ site.title }}</span>
+        </a>
+      </div>
 
+      <!-- Desktop Navigation -->
+      <div class="hidden md:flex items-center space-x-1">
+        {% if page.section-type == "index" %}
           <!-- Scroll to section for each page in index -->
           {% for p in site.pages_list %}
-            <li>
-              <a class="page-scroll" href="#{{ p[1] }}"> {{p[0]}} </a>
-            </li>
+            <a class="nav-link" href="#{{ p[1] }}">{{p[0]}}</a>
           {% endfor %}
-
         {% else %}
           <!-- Blog, Post, Tag and Error pages -->
           {% for p in site.pages_list %}
-            <li>
             {% if p[1] == "latest-post" %}
               {% if page.url == "/blog/index.html" | prepend: {{site.baseurl}} %}
-                <a class="page-scroll" href="#page"> {{p[0]}} </a>
+                <a class="nav-link" href="#page">{{p[0]}}</a>
               {% else %}
-                <a href="{{site.baseurl}}/blog/"> {{p[0]}} </a>
+                <a class="nav-link" href="{{site.baseurl}}/blog/">{{p[0]}}</a>
               {% endif %}
             {% else %}
-                <a href="{{site.baseurl}}/#{{ p[1] }}"> {{p[0]}} </a>
+              <a class="nav-link" href="{{site.baseurl}}/#{{ p[1] }}">{{p[0]}}</a>
             {% endif %}
-            </li>
           {% endfor %}
         {% endif %}
-      </ul>
+      </div>
+
+      <!-- Mobile menu button -->
+      <div class="md:hidden">
+        <button type="button" class="mobile-menu-button inline-flex items-center justify-center p-2 rounded-md text-github-text-muted hover:text-github-text hover:bg-github-bg-secondary focus:outline-none focus:ring-2 focus:ring-inset focus:ring-github-accent" aria-controls="mobile-menu" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <i class="fas fa-bars text-lg"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-menu hidden md:hidden" id="mobile-menu">
+      <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-github-bg border-t border-github-border">
+        {% if page.section-type == "index" %}
+          <!-- Scroll to section for each page in index -->
+          {% for p in site.pages_list %}
+            <a class="block px-3 py-2 text-sm font-medium text-github-text-secondary hover:text-github-text hover:bg-github-bg-secondary rounded-md transition-colors" href="#{{ p[1] }}">{{p[0]}}</a>
+          {% endfor %}
+        {% else %}
+          <!-- Blog, Post, Tag and Error pages -->
+          {% for p in site.pages_list %}
+            {% if p[1] == "latest-post" %}
+              {% if page.url == "/blog/index.html" | prepend: {{site.baseurl}} %}
+                <a class="block px-3 py-2 text-sm font-medium text-github-text-secondary hover:text-github-text hover:bg-github-bg-secondary rounded-md transition-colors" href="#page">{{p[0]}}</a>
+              {% else %}
+                <a class="block px-3 py-2 text-sm font-medium text-github-text-secondary hover:text-github-text hover:bg-github-bg-secondary rounded-md transition-colors" href="{{site.baseurl}}/blog/">{{p[0]}}</a>
+              {% endif %}
+            {% else %}
+              <a class="block px-3 py-2 text-sm font-medium text-github-text-secondary hover:text-github-text hover:bg-github-bg-secondary rounded-md transition-colors" href="{{site.baseurl}}/#{{ p[1] }}">{{p[0]}}</a>
+            {% endif %}
+          {% endfor %}
+        {% endif %}
+      </div>
     </div>
   </div>
 </nav>
