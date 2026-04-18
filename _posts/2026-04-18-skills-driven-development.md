@@ -27,9 +27,13 @@ That is not anti-iteration. It is disciplined iteration. You still adapt. You ju
 
 This is where Skills-Driven Development enters.
 
-In Skills-Driven Development, the skill commits before the code. The skill is not a prompt fragment or a style guide. It is the reasoning artifact that carries intent, defines constraints, names invariants, sets boundary rules, and encodes proof obligations for high-risk logic.
+In Skills-Driven Development, the skill commits before the code. The skill is not a prompt fragment or a style guide. It is the reasoning that produced the design and the application of that reasoning in real implementation decisions. It carries intent, defines constraints, names invariants, sets boundary rules, and encodes proof obligations for high-risk logic.
 
-That artifact is reviewed first. It is challenged for logic gaps, security blind spots, and contradictions. Once approved, it is committed as versioned baseline. Only then do agents apply the skill to produce implementation.
+That artifact is reviewed first. It is challenged for logic gaps, security blind spots, and contradictions. Once approved, it is committed as a versioned baseline. Only then do agents apply the skill to produce implementation.
+
+This is also where long-term maintenance changes. The skill is written for the maintainer who was not in the room when the decisions were made. It explains why the boundary exists, why a shortcut is forbidden, what must stay true when requirements change, and how to extend the system without breaking its core guarantees.
+
+Over time the skill becomes a teaching guide, not a static artifact. Every real change can add better examples, sharper constraints, and clearer reasoning. The system gets easier to maintain because the logic that built it is preserved and improved instead of being lost in old pull requests.
 
 Most teams review code and try to infer intent from the diff. Skills-Driven Development reverses that burden. Intent is reviewed directly, before code exists, and implementation is judged by conformance to committed intent. That single inversion is the pattern.
 
