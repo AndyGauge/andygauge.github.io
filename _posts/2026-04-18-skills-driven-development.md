@@ -7,131 +7,50 @@ tags: [ '2026', 'ai', 'architecture', 'skills-driven-development', 'authorizatio
 
 Agile solved a human problem.
 
-Humans are slow. Humans forget. Humans misread specs, skip details, and learn by touching the thing.
+Humans are slow. Humans forget. Humans misread specs, skip details, and learn by touching the thing. So we learned to ship slices, make progress visible, and adjust in public. That made sense when the bottleneck was human throughput and human uncertainty.
 
-So we learned to ship slices. Make it visible. Get feedback. Adjust.
+Agentic systems fail differently.
 
-That made sense.
-
-But agentic systems fail in a different way.
-
-Agents are fast. They do not get tired. They do not complain. They will write clean code all night long.
-
-And they will still wreck your architecture if you let them run without a complete plan.
-
-That is the new failure mode: local correctness, global incoherence.
+Agents are fast, tireless, and obedient. They can generate beautiful local solutions all day long, and still tear the architecture apart if they are not constrained by a complete plan. That is the new failure mode: local correctness with global incoherence.
 
 ## Waterfall is right for agentic systems
 
-The old argument against waterfall was cost. Exhaustive planning took too long, so teams coded first and discovered intent later.
+The old argument against waterfall was cost. Exhaustive planning took too long, so teams coded first and discovered intent later. In agentic development, that argument collapses. We can generate formal models, boundary maps, interface contracts, threat models, and failure analyses before the first implementation prompt is issued.
 
-That argument is obsolete when planning can be generated, reviewed, and refined quickly.
+Planning is no longer the expensive step. Repairing architectural drift across dozens of agent-produced diffs is the expensive step.
 
-Now we can produce formal models, boundary maps, interface contracts, threat models, failure trees, and decision tables before the first implementation prompt is sent.
+So yes, for agentic systems, waterfall is right. Not as dogma and not as nostalgia, but as control. Finish the plan, review it, freeze it as baseline, and only then allow implementation. If generated code drifts from baseline, either the code is rejected or the plan is formally revised and re-approved.
 
-Planning is no longer the expensive part.
-
-Repairing misaligned code across dozens of agent-generated diffs is the expensive part.
-
-So yes, for agentic delivery, waterfall is right.
-
-Not because we worship process.
-
-Because we need control.
-
-The order is simple:
-
-1. Finish the plan.
-2. Review the plan.
-3. Freeze the plan as a baseline.
-4. Let agents implement.
-5. Reject any implementation that drifts from baseline without an approved plan change.
-
-That is not anti-iteration. It is disciplined iteration.
-
-You still iterate. You just iterate from architecture into code, not from code into accidental architecture.
+That is not anti-iteration. It is disciplined iteration. You still adapt. You just adapt from architecture into code, not from code into accidental architecture.
 
 ## Skills-Driven Development
 
-This is the pattern: **Skills-Driven Development (SDD)**.
+This is where Skills-Driven Development enters.
 
-In SDD, the skill commits before the code.
+In Skills-Driven Development, the skill commits before the code. The skill is not a prompt fragment or a style guide. It is the reasoning artifact that carries intent, defines constraints, names invariants, sets boundary rules, and encodes proof obligations for high-risk logic.
 
-The skill is not a vibe and not a prompt fragment. It is the reasoning artifact that carries system intent.
+That artifact is reviewed first. It is challenged for logic gaps, security blind spots, and contradictions. Once approved, it is committed as versioned baseline. Only then do agents apply the skill to produce implementation.
 
-It defines:
+Most teams review code and try to infer intent from the diff. Skills-Driven Development reverses that burden. Intent is reviewed directly, before code exists, and implementation is judged by conformance to committed intent. That single inversion is the pattern.
 
-- constraints,
-- invariants,
-- state transitions,
-- boundary rules,
-- and proof obligations.
+## Authorization is the proving ground
 
-Then it gets reviewed like a critical design document, because that is what it is.
+Authorization does not usually break in one dramatic moment. It drifts. A role check appears in one endpoint. A tenant exception appears in another. An emergency support bypass survives long after the emergency ends. Months later, nobody can explain policy end to end with confidence.
 
-After review, the skill is committed.
+A formal authorization skill stops that slide. It states who can do what, under which context, with which limits, and with which required evidence. It makes invariants explicit, such as no cross-tenant reads, explicit scope for writes, and time-bounded attributable elevation. It forces deny paths and escalation paths to be part of the model rather than afterthoughts in controller code.
 
-Only then do agents apply it to produce implementation.
-
-This flips the burden of review.
-
-Most teams review code to guess intent.
-
-SDD reviews intent first, then checks code for conformance.
-
-That one inversion changes everything.
-
-## Authorization is where this matters most
-
-Authorization systems rarely fail from one obvious mistake. They fail by drift.
-
-A role check gets added in one endpoint. A tenant exception lands in another. A support bypass appears during an incident. A batch job gets privileged scope "just for now."
-
-Months later, nobody can explain the real policy end to end.
-
-That is why authorization should start with a formal skill.
-
-Define principals, resources, actions, and context.
-
-Define invariants like:
-
-- no cross-tenant reads,
-- write permissions require explicit scope,
-- elevation is time-bounded, attributable, and logged.
-
-Define deny paths, escalation paths, and required evidence for privileged actions.
-
-Now agents are not inventing policy at the controller level. They are implementing a committed model.
-
-Auditing does not disappear, but it changes character.
-
-Instead of reverse-engineering intent from scattered code, you audit conformance against a known baseline.
+Now agents are not inventing policy one request handler at a time. They are implementing a committed model. Auditing still exists, but it changes shape. Instead of reverse-engineering intent from scattered conditionals, you verify conformance against a known baseline.
 
 That is faster. That is safer. That is legible.
 
-## Practical rollout
+## The practical shift
 
-You do not need a full process overhaul on day one.
+This does not require an organizational reset on day one. Start where mistakes are expensive. Build a real skill artifact. Put a gate in front of implementation so no agent-generated PR lands without an approved skill baseline. Require code changes to map back to specific clauses in that baseline. Treat drift as a defect, not an inevitability.
 
-Start with one high-risk domain.
-
-Authorization is usually the right first target.
-
-Then:
-
-1. Create the first skill with explicit invariants and failure modes.
-2. Add a gate: no implementation PR without an approved skill commit.
-3. Require traceability from code changes back to skill clauses.
-4. Track drift as an explicit metric and treat unplanned drift as a defect.
-
-The principle is straightforward.
+The principle is simple enough to remember under pressure.
 
 Centralize architecture before you parallelize coding.
 
-Waterfall was never wrong because planning is bad.
+Waterfall was not wrong because planning is bad. It was wrong when planning was too slow for reality. In agentic systems, planning is cheap and drift is expensive. That flips the equation.
 
-It was wrong when planning was too slow for reality.
-
-In agentic systems, planning is cheap and drift is expensive.
-
-So plan first. Skill first. Then code.
+Skill first. Then code.
