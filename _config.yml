@@ -152,15 +152,21 @@ syntax-highlight: True
 ############
 
 events:
+  - image: /img/gear.png
+    date: "2021"
+    description: "Joined Fountain"
   - image: /img/onguard.png
     date: "January 2020"
     description: "Developed On Guard Security Training"
+  - image: /img/gear.png
+    date: "2020"
+    description: "Primary technical representative and rollout lead working with Microsoft, State of Oregon EIS, PSRB, and Commission for the Blind to implement authorization during the state's accelerated Microsoft 365 migration"
   - image: /img/business_name.png
     date: "January 2018"
     description: "Acquired Unique Advertising"
   - image: /img/gear.png
     date: "February 2016"
-    description: "Launched andygauge"
+    description: "Started this blog"
   - image: /img/prayer-beads.png
     date: "October 2015"
     description: "Launched Praybook"

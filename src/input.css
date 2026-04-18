@@ -54,7 +54,7 @@
   }
   
   .btn-primary {
-    @apply btn bg-github-accent text-white border-github-accent hover:bg-github-accent-hover focus:ring-github-accent;
+    @apply btn bg-github-accent text-white border-github-accent hover:bg-white hover:text-github-accent focus:ring-github-accent;
   }
   
   .btn-secondary {
