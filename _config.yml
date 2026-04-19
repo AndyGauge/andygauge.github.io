@@ -165,6 +165,9 @@ events:
     date: "January 2018"
     description: "Acquired Unique Advertising"
   - image: /img/gear.png
+    date: "2018"
+    description: "Banguay training, Calamba Philipines"
+  - image: /img/gear.png
     date: "February 2016"
     description: "Started this blog"
   - image: /img/prayer-beads.png
