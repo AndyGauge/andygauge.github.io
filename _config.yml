@@ -154,7 +154,7 @@ syntax-highlight: True
 events:
   - image: /img/gear.png
     date: "2026"
-    description: "Integration between Valant and Oregon Health Authority (ROADS)"
+    description: "Certified Integration between Valant and Oregon Health Authority (ROADS)"
   - image: /img/gear.png
     date: "2021"
     description: "Joined Fountain"
@@ -172,7 +172,7 @@ events:
     description: "Barangay training, Calamba Philippines"
   - image: /img/gear.png
     date: "2018"
-    description: "Integration between Valant and Oregon Health Authority (MOTS)"
+    description: "Certified Integration between Valant and Oregon Health Authority (MOTS)"
   - image: /img/gear.png
     date: "February 2016"
     description: "Started this blog"
