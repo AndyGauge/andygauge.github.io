@@ -1,0 +1,78 @@
+# Timeline events shown on the home page (rendered by _includes/timeline.html).
+# Ordered newest-first. Each entry: image, date, description (markdown allowed).
+
+- image: /img/gear.png
+  date: "2026"
+  description: "Certified Integration between Valant and Oregon Health Authority (ROADS)"
+
+- image: /img/gear.png
+  date: "2021"
+  description: "Joined Fountain"
+
+- image: /img/onguard.png
+  date: "January 2020"
+  description: "Developed On Guard Security Training"
+
+- image: /img/gear.png
+  date: "2020"
+  description: "Primary technical representative and rollout lead working with Microsoft, State of Oregon EIS, PSRB, and Commission for the Blind to implement authorization during the state's accelerated Microsoft 365 migration"
+
+- image: /img/business_name.png
+  date: "January 2018"
+  description: "Acquired Unique Advertising"
+
+- image: /img/gear.png
+  date: "2018"
+  description: "Brangay CBDRP model development, Calamba Philippines"
+
+- image: /img/gear.png
+  date: "2018"
+  description: "Certified Integration between Valant and Oregon Health Authority (MOTS)"
+
+- image: /img/gear.png
+  date: "February 2016"
+  description: "Started this blog"
+
+- image: /img/prayer-beads.png
+  date: "October 2015"
+  description: "Launched Praybook"
+
+- image: /img/chalkboard.png
+  date: "January 2013"
+  description: "First Speaking: MongoDB"
+
+- image: /img/red-steam.jpg
+  date: "November 2011"
+  description: "Rejuvenation e-commerce integration into Williams Sonoma brand"
+
+- image: /img/business_name.png
+  date: "March 2009"
+  description: "Master Key Consulting — BIA/BIE overhaul"
+
+- image: /img/gear.png
+  date: "2008"
+  description: "Care to Share — food crisis scheduling"
+
+- image: /img/londonbridge.jpeg
+  date: "2001"
+  description: "Desert Technologies High School Junior Administrator, Lake Havasu City AZ"
+
+- image: /img/londonbridge.jpeg
+  date: "2000"
+  description: "Multi-Network Solutions, Lake Havasu City"
+
+- image: /img/londonbridge.jpeg
+  date: "1999"
+  description: "Volunteer of the Year for creating the TOBAC (Teens on Battle Against Cigarettes and Chew) website"
+
+- image: /img/londonbridge.jpeg
+  date: "1999"
+  description: "Webmaster Chamber of Commerce Lake Havasu City, AZ"
+
+- image: /img/londonbridge.jpeg
+  date: "1998"
+  description: "Founding President, Computer Club, Lake Havasu High School"
+
+- image: /img/londonbridge.jpeg
+  date: "1996"
+  description: "Started a GeoCities site in Silicon Valley Haven/1300 for QBasic tutorials"

@@ -240,3 +240,73 @@
 .stat-label {
   @apply text-sm text-github-text-secondary;
 }
+
+/* Post typography: float fenced code blocks so prose wraps around them.
+   IMPORTANT: kramdown gives the same `highlighter-rouge` class to BOTH inline
+   code (<code>) and fenced blocks (<div>). Target only the <div> so inline
+   code stays inline. */
+@media (min-width: 768px) {
+  .post-prose div.highlighter-rouge {
+    float: right !important;
+    clear: right !important;
+    width: fit-content !important;
+    max-width: 340px !important;
+    margin-left: 1.5rem !important;
+    margin-top: 0.375rem !important;
+    margin-bottom: 0.75rem !important;
+    font-size: 0.9375rem !important;
+    line-height: 1.55 !important;
+  }
+
+  /* Shape the inner pre so the background hugs the content.
+     white-space: pre (no wrap) — preserve newlines but never break a line. */
+  .post-prose div.highlighter-rouge pre,
+  .post-prose div.highlighter-rouge .highlight {
+    margin: 0 !important;
+    padding: 0.875rem 1.125rem !important;
+    white-space: pre !important;
+    word-break: normal !important;
+    overflow-x: auto !important;
+  }
+
+  /* Two-column section: prose left, code right, vertical divider.
+     Used via <section class="col2"> ... </section> in posts. */
+  .post-prose .col2 {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    column-gap: 2rem !important;
+    align-items: start !important;
+    position: relative !important;
+    margin: 1.5rem 0 !important;
+  }
+  .post-prose .col2::before {
+    content: "" !important;
+    position: absolute !important;
+    left: 50% !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    width: 1px !important;
+    background: currentColor !important;
+    opacity: 0.12 !important;
+    transform: translateX(-50%) !important;
+  }
+  .post-prose .col2 .col2__left  { grid-column: 1; }
+  .post-prose .col2 .col2__right { grid-column: 2; }
+
+  /* Inside the 2-col, code blocks stack normally (defeat the float rule). */
+  .post-prose .col2 div.highlighter-rouge {
+    float: none !important;
+    clear: none !important;
+    max-width: none !important;
+    width: auto !important;
+    margin: 0 0 1rem 0 !important;
+  }
+  .post-prose .col2 .col2__right > :last-child { margin-bottom: 0 !important; }
+}
+
+/* Mobile fallback: col2 stacks; no divider. */
+@media (max-width: 767px) {
+  .post-prose .col2 { display: block; }
+  .post-prose .col2 .col2__left,
+  .post-prose .col2 .col2__right { display: block; }
+}

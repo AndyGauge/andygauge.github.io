@@ -12,7 +12,7 @@
 
     <main class="pt-16">
       <article class="container-custom py-8">
-        <div class="max-w-4xl mx-auto">
+        <div class="max-w-2xl mx-auto">
           <!-- Post Header -->
           <header class="mb-8">
             <h1 class="text-3xl md:text-4xl font-bold text-github-text mb-4">{{ page.title }}</h1>
@@ -43,7 +43,7 @@
           </header>
 
           <!-- Post Content -->
-          <div class="prose prose-lg max-w-none">
+          <div class="post-prose prose prose-xl max-w-none flow-root prose-p:text-justify prose-p:hyphens-auto prose-li:hyphens-auto prose-h2:clear-both prose-h3:clear-both prose-code:before:content-none prose-code:after:content-none" lang="en">
             {{ page.content | markdownify }}
           </div>
 

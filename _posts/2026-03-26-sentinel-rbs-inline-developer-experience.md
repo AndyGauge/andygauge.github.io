@@ -69,24 +69,36 @@ code, and a tighter feedback loop for both human and machine.
 ## `sentinel check`: a CI gate for type freshness
 
 Keeping signatures in sync locally is one thing. Making sure they stay in sync
-across a team is another. Sentinel 0.3.0 introduces the `check` command:
+across a team is another. Sentinel 0.3.0 introduces the `check` command — a
+read-only verification that regenerates signatures in memory, compares them
+against what's on disk, and exits with code 1 if anything is stale or missing.
+It doesn't modify any files, which makes it safe to drop into any stage that
+needs a freshness gate: a CI step, a Git pre-commit hook, a developer's
+terminal before pushing.
+
+<section class="col2" markdown="1">
+<div class="col2__left" markdown="1">
+
+The command itself is one line. Wire it into CI by invoking it before the rest
+of your test suite runs, and wire it into Git with a pre-commit script so the
+freshness check runs on every commit — catching stale signatures before they
+ever reach the PR.
+
+If someone adds a type annotation but forgets to regenerate, or if an AI agent
+modifies method signatures without updating the `.rbs` files, the check catches
+it before the code lands.
+
+</div>
+<div class="col2__right" markdown="1">
 
 ```bash
 bundle exec sentinel check
 ```
 
-This is a read-only verification. It regenerates signatures in memory, compares
-them against what's on disk, and exits with code 1 if anything is stale or
-missing. It doesn't modify any files.
-
-This makes it straightforward to add as a CI step:
-
 ```yaml
 - name: Check RBS signatures are up to date
   run: bundle exec sentinel check
 ```
-
-Or as a Git pre-commit hook:
 
 ```bash
 #!/usr/bin/env bash
@@ -94,9 +106,8 @@ set -e
 bundle exec sentinel check
 ```
 
-If someone adds a type annotation but forgets to regenerate, or if an AI agent
-modifies method signatures without updating the `.rbs` files, the check catches
-it before the code lands.
+</div>
+</section>
 
 ## Getting started
 

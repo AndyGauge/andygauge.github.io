@@ -17,3 +17,5 @@ _deploy/*
 Rakefile
 .jekyll-metadata
 .idea/*
+node_modules/
+.DS_Store
