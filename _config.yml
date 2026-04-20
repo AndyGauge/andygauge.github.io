@@ -147,46 +147,8 @@ disqus-shortname: "andygauge"
 
 syntax-highlight: True
 
-############
-# Timeline #
-############
-
-events:
-  - image: /img/gear.png
-    date: "2021"
-    description: "Joined Fountain"
-  - image: /img/onguard.png
-    date: "January 2020"
-    description: "Developed On Guard Security Training"
-  - image: /img/gear.png
-    date: "2020"
-    description: "Primary technical representative and rollout lead working with Microsoft, State of Oregon EIS, PSRB, and Commission for the Blind to implement authorization during the state's accelerated Microsoft 365 migration"
-  - image: /img/business_name.png
-    date: "January 2018"
-    description: "Acquired Unique Advertising"
-  - image: /img/gear.png
-    date: "February 2016"
-    description: "Started this blog"
-  - image: /img/prayer-beads.png
-    date: "October 2015"
-    description: "Launched Praybook"
-  - image: /img/chalkboard.png
-    date: "January 2013"
-    description: "First Speaking: MongoDB"
-  - image: /img/red-steam.jpg
-    date: "November 2011"
-    description: "Learned Ruby / Rails"
-  - image: /img/londonbridge.jpeg
-    date: "2001"
-    description: "Desert Technologies High School Junior Administrator, Lake Havasu City AZ"
-  - image: /img/londonbridge.jpeg
-    date: "2000"
-    description: "Multi-Network Solutions, Lake Havasu City"
-  - image: /img/londonbridge.jpeg
-    date: "1999"
-    description: "Webmaster Chamber of Commerce Lake Havasu City, AZ"
-
-# First image of the Timeline
+# Timeline events live in _data/timeline.yml.
+# Home-page section order and nav links live in _data/sections.yml.
 
 timeline-img: "/img/typewriter.jpg"
 
@@ -215,20 +177,9 @@ social:
 
 ################################################################################
 
-# NB! Tread carefully if you want to change the variables below this point!
-
-# Sections shown in the index page
-
-pages_list:
-  Faq: 'faq'
-  Blog: 'latest-post'
-  Samples: 'samples'
-  Timeline: 'timeline'
-  Contact: 'contact'
-
 # Exclusion list from the generated _site
 
-exclude: ["LICENSE", "README.md", "CONTRIBUTING", "CONTRIBUTORS", "scripts", "node_modules", "package.json", "package-lock.json", "tailwind.config.js", "src", ".tool-versions"]
+exclude: ["LICENSE", "README.md", "CONTRIBUTING", "CONTRIBUTORS", "CLAUDE.md", "scripts", "node_modules", "package.json", "package-lock.json", "tailwind.config.js", "src", ".tool-versions"]
 
 # Pagination path
 

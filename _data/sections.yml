@@ -1,0 +1,30 @@
+# Home-page sections — single source of truth.
+# Order here = order on the home page AND order in the nav bar.
+#
+# For each entry:
+#   id:           anchor id on the home page (#<id>) and nav link target
+#   label:        nav bar link text
+#   include:      name of the partial in _includes/<include>.html to render
+#   off_index_url: (optional) if set, nav links to this URL from non-home pages
+#                  instead of "/#<id>" (used for Blog → /blog/)
+
+- id: faq
+  label: Faq
+  include: faq.html
+
+- id: latest-post
+  label: Blog
+  include: latest-post.html
+  off_index_url: /blog/
+
+- id: samples
+  label: Samples
+  include: samples.html
+
+- id: timeline
+  label: Timeline
+  include: timeline.html
+
+- id: contact
+  label: Contact
+  include: contact.html

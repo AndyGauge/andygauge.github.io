@@ -1,17 +1,12 @@
-
-<!-- Timeline Start -->
-
-<section id="{{ page.section-type }}" class="section-padding bg-github-bg">
+<!-- Timeline. Data: _data/timeline.yml (ordered newest-first) -->
+<section id="timeline" class="section-padding bg-github-bg">
   <div class="container-custom">
     <div class="text-center mb-12">
       <h2 class="text-2xl md:text-3xl font-bold text-github-text mb-3">Timeline</h2>
-      <div class="prose prose-lg max-w-2xl mx-auto text-github-text-secondary">
-        {{ page.content | markdownify }}
-      </div>
     </div>
 
     <div class="construction-timeline max-w-4xl mx-auto">
-      {% for event in site.events %}
+      {% for event in site.data.timeline %}
       <div class="timeline-item">
         <div class="card-hover p-6 ml-4">
           <div class="flex items-start gap-4">
@@ -31,9 +26,6 @@
         </div>
       </div>
       {% endfor %}
-
     </div>
   </div>
 </section>
-
-<!-- Timeline End -->

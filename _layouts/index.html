@@ -1,6 +1,4 @@
-
-<!-- Index Layout Start -->
-
+<!-- Home page layout. Section order is driven by _data/sections.yml. -->
 <!DOCTYPE html>
 <html lang="{{ site.lang }}">
 
@@ -9,29 +7,15 @@
   <body class="bg-github-bg text-github-text">
 
     {% include navigation.html %}
-
     {% include header.html %}
-
     {% include intro.html %}
 
-    {% for p in site.pages_list %}
-      {% for page in site.pages %}
-        {% if p[1] == page.section-type %}
-          {% include {{ page.path }} %}
-        {% endif %}
-      {% endfor %}
-      {% if p[1] == 'faq' %}
-        <div class="container-custom py-8">
-          <img src="img/railway.jpg" alt="Railway" class="w-full rounded-lg shadow-github"/>
-        </div>
-      {% endif %}
+    {% for section in site.data.sections %}
+      {% include {{ section.include }} %}
     {% endfor %}
 
     {% include footer.html %}
-
     {% include js.html %}
 
   </body>
 </html>
-
-<!-- Index Layout End -->

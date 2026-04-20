@@ -1,15 +1,13 @@
-
-<!-- Samples Start -->
-
-<section id="{{ page.section-type }}" class="section-padding bg-github-bg">
+<!-- Samples. Data: _data/samples.yml -->
+<section id="samples" class="section-padding bg-github-bg">
   <div class="container-custom">
     <div class="text-center mb-12">
       <h2 class="text-2xl md:text-3xl font-bold text-github-text mb-3">Samples</h2>
-      <p class="text-github-text-secondary max-w-2xl mx-auto">{{ page.content }}</p>
+      <p class="text-github-text-secondary max-w-2xl mx-auto">Collection of work samples from the past.</p>
     </div>
-    
+
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-      {% for sample in page.samples %}
+      {% for sample in site.data.samples %}
       <div class="card-hover p-6 group">
         <div class="flex flex-col md:flex-row gap-4">
           <div class="flex-shrink-0">
@@ -32,5 +30,3 @@
     </div>
   </div>
 </section>
-
-<!-- Samples End -->

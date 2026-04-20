@@ -1,0 +1,32 @@
+# Samples shown on the home page (rendered by _includes/samples.html).
+# Each entry: title, url, img, description (markdown allowed in description).
+
+- title: Sentinel RBS
+  url: https://github.com/andygauge/sentinel-rb
+  img: /img/samples/sentinel.png
+  description: "Rust-powered file watcher that keeps Ruby RBS type signatures in sync with inline annotations. Provides instant feedback in your editor via Steep, parallel generation across thousands of files, and a CI-ready check command."
+
+- title: Rexy the Animator
+  url: https://rexytheanimator.com/
+  img: /img/samples/rexytheanimator.jpeg
+  description: Animations and short-series by gifted independent artist and animator.
+
+- title: On Guard Security Training
+  url: http://on-guard.org
+  img: /img/samples/onguard.png
+  description: Cybersecurity Training for small business with a focus on the zero-trust vendor security model.  Provides training for small business at a flat rate and simplified onboarding.
+
+- title: Praybook
+  url: https://praybook.herokuapp.com
+  img: /img/samples/praybook.jpg
+  description: "Record your prayers in Praybook then update their status on the go.  Pray for your friends and share your needs with others.  When your prayers are answered, they become praise so your friends and groups know how to pray for you."
+
+- title: "Be Bold Street Minstries"
+  url: http://www.beboldstreetministries.org
+  img: /img/samples/bebold.jpg
+  description: "Spreading the gospel of Jesus by providing for his children.  A non profit in Salem focused on reaching homeless and drug affected with the powerful message of Jesus Christ."
+
+- title: "Rejuvenation"
+  url: http://www.rejuvenation.com
+  img: /img/samples/rejuvenation.jpg
+  description: "Rejuvenation sells classic American lighting for traditional period looks. In 2012, Rejuvenation launched a new Ruby on Rails website integrated with their ERP system, Microsoft Dynamics AX."
