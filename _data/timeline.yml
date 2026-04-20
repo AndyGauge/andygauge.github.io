@@ -2,6 +2,10 @@
 # Ordered newest-first. Each entry: image, date, description (markdown allowed).
 
 - image: /img/gear.png
+  date: "2026"
+  description: "Certified Integration between Valant and Oregon Health Authority (ROADS)"
+
+- image: /img/gear.png
   date: "2021"
   description: "Joined Fountain"
 
@@ -16,6 +20,14 @@
 - image: /img/business_name.png
   date: "January 2018"
   description: "Acquired Unique Advertising"
+
+- image: /img/gear.png
+  date: "2018"
+  description: "Brangay CBDRP model development, Calamba Philippines"
+
+- image: /img/gear.png
+  date: "2018"
+  description: "Certified Integration between Valant and Oregon Health Authority (MOTS)"
 
 - image: /img/gear.png
   date: "February 2016"
@@ -51,8 +63,16 @@
 
 - image: /img/londonbridge.jpeg
   date: "1999"
+  description: "Volunteer of the Year for creating the TOBAC (Teens on Battle Against Cigarettes and Chew) website"
+
+- image: /img/londonbridge.jpeg
+  date: "1999"
   description: "Webmaster Chamber of Commerce Lake Havasu City, AZ"
 
 - image: /img/londonbridge.jpeg
   date: "1998"
   description: "Founding President, Computer Club, Lake Havasu High School"
+
+- image: /img/londonbridge.jpeg
+  date: "1996"
+  description: "Started a GeoCities site in Silicon Valley Haven/1300 for QBasic tutorials"
