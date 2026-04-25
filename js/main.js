@@ -50,6 +50,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         new Typed('#typed-text', {
             strings: lines,
+            contentType: null,
             typeSpeed: 50,
             backSpeed: 30,
             backDelay: 2000,
