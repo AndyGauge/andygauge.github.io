@@ -35,4 +35,6 @@ I keep the runtime small for the same reason. `sveltekitbook` exposes four thing
 
 The pattern travels. Documentation wants four — claim, example, gotcha, when-not-to-use. Research wants population, method, finding, limit. Sermon notes want text, setting, tension, application. The contents change. The four slots do not.
 
+The pattern scales past the page too. Four teams attacking one problem from four different angles, paid to compare notes for an hour at the end, would compound a problem-space faster than four companies running one experiment each and waiting for the knowledge to leak between them through attrition. People will turn up for that — expenses paid, an hour together, an award and a check. They are already running the experiments on their own time, in second jobs and hobby builds, and most of that work is wasted because nobody puts the four runs in the same room. The retrospective is the schema at team scale: four rungs, each team shows its work, the rest read across the four for what no single run could have told them.
+
 If you write with an LLM, design the four dimensions before you ask for content. The chapter the reader can hold is the chapter that fits the four slots they were born with. The book that lands is the one that uses all four through its closing line.
