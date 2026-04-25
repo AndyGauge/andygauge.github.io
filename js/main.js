@@ -41,25 +41,13 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Typed.js initialization for dynamic typing
+    // Typed.js initialization for dynamic typing — lines come from CodeGen,
+    // which picks a (language, problem-kind, problem) and composes a snippet.
     if (typeof Typed !== 'undefined' && document.getElementById('typed-text')) {
-        const typedTextElement = document.getElementById('typed-text');
-        const lines = [
-            "module ApplicationHelper",
-            "  def pb_menu_item (controller_name, path: nil, display: controller_name.capitalize)",
-            "    path ||= send('#{controller_name.downcase}_path')",
-            "    'li class='nav-item #{' active' if current_page?(path)}'",
-            "      a class='nav-link pb-navbar-link'href='#{path}'#{display}/a",
-            "    /li'.html_safe",
-            "  end",
-            "  def pb_bottom_menu(items)",
-            "    items.inject('') {|collects, item|",
-            "      collects + 'li class='nav-item'>' + link_to(item.titleize, send('#{item}_path'), class: 'nav-link') + '/li'",
-            "    }.html_safe",
-            "  end",
-            "end"
-        ];
-        
+        const lines = (window.CodeGen && window.CodeGen.generate)
+            ? window.CodeGen.generate()
+            : ['// loading...'];
+
         new Typed('#typed-text', {
             strings: lines,
             typeSpeed: 50,
