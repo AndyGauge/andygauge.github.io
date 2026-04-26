@@ -5,6 +5,8 @@ title: "Applied Neuroprogramming: 4D Chess for Finite Minds"
 tags: [ '2026', 'ai', 'llm', 'svelte', 'sveltekit', 'sveltekitbook', 'writing', 'neuroplasticity', 'open-source' ]
 ---
 
+This argument is also [a book](https://andygauge.github.io/applied-neuroprogramming-4d-chess-for-finite-minds/), rendered in the schema the post describes. Scaffold your own book with `npm create sveltekitbook@latest my-book`.
+
 A far-reaching concept does not fit a finite mind in its native form. To get it from out there into in here, you have to break it into shapes the brain knows how to receive. That is not a writing problem. It is a neuroprogramming problem, and the psychology under it is plain. Working memory holds about four chunks at once. A six-digit number gets remembered by chunking — three pairs, two triples, whatever lets the brain hold the pieces while it processes the rest. Throw eight unrelated items at a person and one drops. The four-slot ceiling is the bottleneck the schema is built around.
 
 People talk about *4D chess* as if it were a joke. It is the literal architecture of the human mind. Four compartments, each focused on a different slice of the same situation. A book that uses all four at once teaches the reader to hold four streams at once. A book that wastes the slots, or fills them with the same flavor of content over and over, leaves three of the four dark.
