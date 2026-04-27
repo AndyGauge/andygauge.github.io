@@ -59,6 +59,13 @@
   kind: book
   description: A sample sveltekitbook that explains sveltekitbook itself — twelve pages, one topic each.
 
+- title: NP-Hard
+  slug: np-hard
+  category: Engineering & Talks
+  kind: book
+  qr: /img/qr/np-hard.svg
+  description: Software maintenance is at least NP-hard and several of its subproblems are undecidable — the proof tax safety-critical pays, and the rest of the industry refuses.
+
 # --- Society & History ---------------------------------------------------
 - title: The State With Teeth
   slug: the-state-with-teeth
