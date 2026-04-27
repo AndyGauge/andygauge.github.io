@@ -83,3 +83,10 @@
   category: Society & History
   kind: post
   description: A single-page post on the ICC confirmation of charges.
+
+- title: Alchemist
+  slug: alchemist
+  category: Society & History
+  kind: book
+  qr: /img/qr/alchemist.svg
+  description: Rooke & Torbert's seventh Action Logic — Mandela, Gandhi, Roddick — set against 1700 years of literal alchemy and the data on how outliers are made.
