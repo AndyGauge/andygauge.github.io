@@ -17,6 +17,10 @@
   include: latest-post.html
   off_index_url: /blog/
 
+- id: booklog
+  label: Booklog
+  include: booklog.html
+
 - id: samples
   label: Samples
   include: samples.html

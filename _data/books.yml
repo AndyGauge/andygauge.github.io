@@ -1,0 +1,85 @@
+# Booklog entries. Order within a category is preserved.
+# Categories render in the order they first appear in this file.
+#
+# Fields:
+#   title:        display name
+#   slug:         GitHub repo name (becomes andygauge.github.io/<slug>/)
+#   category:     groups the card under a heading
+#   kind:         (optional) "book", "deck", "post" — shown as a small tag
+#   description:  one or two sentences, plain text
+
+# --- Cognition -----------------------------------------------------------
+- title: Applied Neuroprogramming
+  slug: applied-neuroprogramming-4d-chess-for-finite-minds
+  category: Cognition
+  kind: book
+  description: 4D chess for finite minds — schema-driven reading for ideas that don't fit working memory in their native form.
+
+- title: Plasticity
+  slug: plasticity
+  category: Cognition
+  kind: book
+  description: Context window as synthetic synapse. 88 pages of research on neuroplasticity and what models inherit from it.
+
+- title: Déjà Vu
+  slug: deja-vu
+  category: Cognition
+  kind: book
+  description: The science of memory, dissociation, model drift, and the algorithms that forget for us.
+
+# --- AI ------------------------------------------------------------------
+- title: AGI
+  slug: agi
+  category: AI
+  kind: book
+  description: Research-driven walk through the transformer lineage, the rigor spine, and where general intelligence sits relative to both.
+
+- title: AI For Good
+  slug: ai-for-good
+  category: AI
+  kind: book
+  description: A book for a Rust conference on ethical, human-focused applications of LLMs.
+
+# --- Engineering & Talks -------------------------------------------------
+- title: Noninterference Guarantee
+  slug: noninterference-guarantee
+  category: Engineering & Talks
+  kind: deck
+  description: Type-state authorization for LLM tool schemas — a formal noninterference model with proof.
+
+- title: Types as Policy
+  slug: types-as-policy
+  category: Engineering & Talks
+  kind: deck
+  description: RBS-driven MCP schema discrimination. The slide reader version of the talk.
+
+- title: sveltekitbook Tour
+  slug: sveltekitbook-tour
+  category: Engineering & Talks
+  kind: book
+  description: A sample sveltekitbook that explains sveltekitbook itself — twelve pages, one topic each.
+
+# --- Society & History ---------------------------------------------------
+- title: The State With Teeth
+  slug: the-state-with-teeth
+  category: Society & History
+  kind: book
+  description: A chronology in fourteen sections, spanning 1973–2026.
+
+- title: By Degrees
+  slug: by-degrees
+  category: Society & History
+  kind: book
+  description: American policy, left to right — forty laws signed between 1989 and 2023, arranged by what they actually did.
+
+- title: Matronae
+  slug: matronae
+  category: Society & History
+  kind: book
+  description: Scripture on gender, left to right — thirty-five passages arranged by who-leads-whom.
+
+- title: The Knock Came Back
+  slug: the-knock-came-back
+  category: Society & History
+  kind: post
+  description: A single-page post on the ICC confirmation of charges.
