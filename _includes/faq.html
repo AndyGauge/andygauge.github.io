@@ -36,6 +36,19 @@
           edit, and publish.
         </p>
       </div>
+
+      <div class="card-hover p-6">
+        <h3 class="text-sm font-semibold uppercase tracking-wide text-github-accent mb-2">Question</h3>
+        <p class="text-lg font-medium text-github-text mb-4">How do I alias <code class="px-1 py-0.5 bg-github-bg rounded text-sm">book</code> to the sveltekitbook scaffolder?</p>
+        <h3 class="text-sm font-semibold uppercase tracking-wide text-github-success mb-2">Answer</h3>
+        <p class="text-github-text-secondary mb-3">
+          Drop a one-liner into your shell profile — <code class="px-1 py-0.5 bg-github-bg rounded text-sm">~/.zshrc</code> on zsh, <code class="px-1 py-0.5 bg-github-bg rounded text-sm">~/.bashrc</code> on bash:
+        </p>
+        <pre class="bg-github-bg border border-github-border rounded p-3 mb-3 overflow-x-auto"><code class="text-sm text-github-text">alias book="npm create sveltekitbook@latest"</code></pre>
+        <p class="text-github-text-secondary">
+          Reload the shell (<code class="px-1 py-0.5 bg-github-bg rounded text-sm">source ~/.zshrc</code>) and <code class="px-1 py-0.5 bg-github-bg rounded text-sm">book my-book</code> scaffolds a fresh SvelteKit book in <code class="px-1 py-0.5 bg-github-bg rounded text-sm">./my-book</code>. Fish users put <code class="px-1 py-0.5 bg-github-bg rounded text-sm">alias book "npm create sveltekitbook@latest"</code> in <code class="px-1 py-0.5 bg-github-bg rounded text-sm">~/.config/fish/config.fish</code> instead.
+        </p>
+      </div>
     </div>
 
     <!-- Visual divider between FAQ and Blog -->
