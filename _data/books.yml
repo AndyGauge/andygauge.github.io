@@ -59,6 +59,13 @@
   kind: book
   description: A sample sveltekitbook that explains sveltekitbook itself — twelve pages, one topic each.
 
+- title: Too Many Lists
+  slug: too-many-lists
+  category: Engineering & Talks
+  kind: book
+  qr: /img/qr/too-many-lists.svg
+  description: Aria Beingessner's Rust linked-lists book, rewritten with three parallel reader tracks (C / Py / 0) — same arc, three vantages — plus 2021/2024 edition deltas inline and a chapter-end perspective from each track.
+
 # --- Society & History ---------------------------------------------------
 - title: The State With Teeth
   slug: the-state-with-teeth
