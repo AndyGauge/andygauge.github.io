@@ -59,6 +59,13 @@
   kind: book
   description: A sample sveltekitbook that explains sveltekitbook itself — twelve pages, one topic each.
 
+- title: NP-Hard
+  slug: np-hard
+  category: Engineering & Talks
+  kind: book
+  qr: /img/qr/np-hard.svg
+  description: Software maintenance is at least NP-hard and several of its subproblems are undecidable — the proof tax safety-critical pays, and the rest of the industry refuses.
+
 - title: Too Many Lists
   slug: too-many-lists
   category: Engineering & Talks
@@ -97,3 +104,10 @@
   kind: book
   qr: /img/qr/alchemist.svg
   description: Rooke & Torbert's seventh Action Logic — Mandela, Gandhi, Roddick — set against 1700 years of literal alchemy and the data on how outliers are made.
+
+- title: Unitive
+  slug: unitive
+  category: Society & History
+  kind: book
+  qr: /img/qr/unitive.svg
+  description: What lies past the Alchemist — Cook-Greuter's contested Unitive horizon. Thirty-six pages on the moment the constructed self collapses into the community it serves, with Solon, Susan Fowler, Niko Matsakis, and the open-source organizations that synthesize what no single corporation can.
