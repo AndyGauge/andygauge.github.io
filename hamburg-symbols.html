@@ -1,0 +1,414 @@
+---
+layout: page
+title: HamburgSymbols
+subtitle: A working reference for the Uranian Astrology TrueType font
+---
+
+<style>
+  .hs { font-family: "HamburgSymbols", serif; font-size: 1.5rem; line-height: 1; }
+  .hs-lg { font-family: "HamburgSymbols", serif; font-size: 2rem; line-height: 1.4; }
+  .hs-cell { cursor: pointer; user-select: none; }
+  .hs-cell:hover { background: #f1f3f5; }
+  .key {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.8rem;
+    background: #f6f8fa;
+    border: 1px solid #d0d7de;
+    border-radius: 4px;
+    padding: 0 6px;
+    color: #24292f;
+  }
+  .symtable {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 4px;
+    margin: 1rem 0 2rem;
+  }
+  .symcell {
+    display: grid;
+    grid-template-columns: 36px 36px 1fr;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 8px;
+    border: 1px solid #d0d7de;
+    border-radius: 6px;
+    background: #fff;
+    font-size: 0.85rem;
+  }
+  .symcell:hover { background: #f6f8fa; cursor: pointer; }
+  .symcell .glyph { font-family: "HamburgSymbols", serif; font-size: 1.5rem; text-align: center; }
+  .symcell .label { color: #57606a; }
+  #composer-preview {
+    font-family: "HamburgSymbols", serif;
+    font-size: 2.25rem;
+    line-height: 1.5;
+    min-height: 4rem;
+    padding: 1rem;
+    background: #fff;
+    border: 1px solid #d0d7de;
+    border-radius: 8px;
+    word-break: break-word;
+  }
+  #composer-input {
+    width: 100%;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 1rem;
+    padding: 0.75rem 1rem;
+    border: 1px solid #d0d7de;
+    border-radius: 8px;
+    min-height: 3rem;
+  }
+  details > summary { cursor: pointer; font-weight: 600; padding: 0.5rem 0; }
+</style>
+
+<p>
+  HamburgSymbols is a public-domain TrueType font built primarily for Uranian astrology.
+  Each ASCII keystroke maps to a chart glyph — when text is set in this font, you get
+  symbols. Type <code>Q=12;42'53"f</code> in HamburgSymbols and you read
+  <span class="hs">Q=12;42'53"f</span> — Sun at 12°42&prime;53&Prime; Cancer.
+</p>
+
+<h2>How the notation works</h2>
+
+<p>
+  Chart positions follow degree-minute-second form, with the planet on the left and the
+  sign on the right. The middle is location.
+</p>
+
+<ul>
+  <li><span class="key">;</span> renders as <span class="hs">;</span> — the degree mark <code>°</code></li>
+  <li><span class="key">'</span> renders as <span class="hs">'</span> — minutes</li>
+  <li><span class="key">"</span> renders as <span class="hs">"</span> — seconds</li>
+  <li><span class="key">=</span> renders as <span class="hs">=</span> — equals (used in midpoint equations)</li>
+  <li><span class="key">@</span> renders as <span class="hs">@</span> — slashed zero (some prefer it for whole-degree positions)</li>
+</ul>
+
+<p>
+  Midpoint equations look like <span class="hs-lg">U/W=Q</span> (Saturn/Moon = Sun),
+  typed as <code>U/W=Q</code>. Subscripts after a planet flag what kind of position it
+  is: <span class="key">#</span> natal, <span class="key">$</span> radix,
+  <span class="key">%</span> solar arc, <span class="key">&amp;</span> transit,
+  <span class="key">^</span> progressed, <span class="key">*</span> directed.
+  So <span class="hs-lg">U&amp;dW#</span> is "transiting Saturn directed to natal Moon"
+  — typed as <code>U&amp;dW#</code> (the <code>d</code> in between is just the letter
+  <em>directed-to</em>; in this font that ASCII <code>d</code> renders as Gemini, so use
+  it deliberately or replace with another connector).
+</p>
+
+<h2>Compose</h2>
+
+<p>Type ASCII below; the preview above renders in HamburgSymbols. Click any glyph in the reference tables to append it.</p>
+
+<div id="composer-preview" aria-live="polite">Q=12;42'53"f</div>
+<textarea id="composer-input" rows="2" spellcheck="false">Q=12;42'53"f</textarea>
+<div class="flex gap-2 mt-2">
+  <button type="button" id="composer-copy" class="btn btn-secondary">Copy text</button>
+  <button type="button" id="composer-clear" class="btn btn-outline">Clear</button>
+  <span id="composer-status" class="text-sm text-github-text-secondary self-center"></span>
+</div>
+
+<h2 class="mt-10">Planets</h2>
+<p class="text-sm text-github-text-secondary">Shift + the listed key. Capital letters give the major bodies.</p>
+<div class="symtable not-prose">
+  <div class="symcell" data-insert="Q"><span class="key">Q</span><span class="glyph">Q</span><span class="label">Sun</span></div>
+  <div class="symcell" data-insert="W"><span class="key">W</span><span class="glyph">W</span><span class="label">Moon</span></div>
+  <div class="symcell" data-insert="E"><span class="key">E</span><span class="glyph">E</span><span class="label">Mercury</span></div>
+  <div class="symcell" data-insert="R"><span class="key">R</span><span class="glyph">R</span><span class="label">Venus</span></div>
+  <div class="symcell" data-insert="T"><span class="key">T</span><span class="glyph">T</span><span class="label">Mars</span></div>
+  <div class="symcell" data-insert="Y"><span class="key">Y</span><span class="glyph">Y</span><span class="label">Jupiter</span></div>
+  <div class="symcell" data-insert="U"><span class="key">U</span><span class="glyph">U</span><span class="label">Saturn</span></div>
+  <div class="symcell" data-insert="I"><span class="key">I</span><span class="glyph">I</span><span class="label">Uranus</span></div>
+  <div class="symcell" data-insert="O"><span class="key">O</span><span class="glyph">O</span><span class="label">Neptune</span></div>
+  <div class="symcell" data-insert="P"><span class="key">P</span><span class="glyph">P</span><span class="label">Pluto</span></div>
+</div>
+
+<h2>Hamburg School TNPs (Transneptunian Points)</h2>
+<p class="text-sm text-github-text-secondary">The hypothetical bodies of the Hamburg School, in their conventional order.</p>
+<div class="symtable not-prose">
+  <div class="symcell" data-insert="S"><span class="key">S</span><span class="glyph">S</span><span class="label">Cupido</span></div>
+  <div class="symcell" data-insert="D"><span class="key">D</span><span class="glyph">D</span><span class="label">Hades</span></div>
+  <div class="symcell" data-insert="F"><span class="key">F</span><span class="glyph">F</span><span class="label">Zeus</span></div>
+  <div class="symcell" data-insert="G"><span class="key">G</span><span class="glyph">G</span><span class="label">Kronos</span></div>
+  <div class="symcell" data-insert="H"><span class="key">H</span><span class="glyph">H</span><span class="label">Apollon</span></div>
+  <div class="symcell" data-insert="J"><span class="key">J</span><span class="glyph">J</span><span class="label">Admetos</span></div>
+  <div class="symcell" data-insert="K"><span class="key">K</span><span class="glyph">K</span><span class="label">Vulkanus</span></div>
+  <div class="symcell" data-insert="L"><span class="key">L</span><span class="glyph">L</span><span class="label">Poseidon</span></div>
+</div>
+
+<h2>Zodiac signs</h2>
+<p class="text-sm text-github-text-secondary">Lowercase letters. Memory aid: home row + a few migrations to fit the sign order.</p>
+<div class="symtable not-prose">
+  <div class="symcell" data-insert="a"><span class="key">a</span><span class="glyph">a</span><span class="label">Aries</span></div>
+  <div class="symcell" data-insert="s"><span class="key">s</span><span class="glyph">s</span><span class="label">Taurus</span></div>
+  <div class="symcell" data-insert="d"><span class="key">d</span><span class="glyph">d</span><span class="label">Gemini</span></div>
+  <div class="symcell" data-insert="f"><span class="key">f</span><span class="glyph">f</span><span class="label">Cancer</span></div>
+  <div class="symcell" data-insert="g"><span class="key">g</span><span class="glyph">g</span><span class="label">Leo</span></div>
+  <div class="symcell" data-insert="h"><span class="key">h</span><span class="glyph">h</span><span class="label">Virgo</span></div>
+  <div class="symcell" data-insert="j"><span class="key">j</span><span class="glyph">j</span><span class="label">Libra</span></div>
+  <div class="symcell" data-insert="k"><span class="key">k</span><span class="glyph">k</span><span class="label">Scorpio</span></div>
+  <div class="symcell" data-insert="l"><span class="key">l</span><span class="glyph">l</span><span class="label">Sagittarius</span></div>
+  <div class="symcell" data-insert="z"><span class="key">z</span><span class="glyph">z</span><span class="label">Capricorn (NA)</span></div>
+  <div class="symcell" data-insert="x"><span class="key">x</span><span class="glyph">x</span><span class="label">Aquarius</span></div>
+  <div class="symcell" data-insert="c"><span class="key">c</span><span class="glyph">c</span><span class="label">Pisces</span></div>
+  <div class="symcell" data-insert="v"><span class="key">v</span><span class="glyph">v</span><span class="label">Capricorn (Euro)</span></div>
+</div>
+
+<h2>Aspects</h2>
+<p class="text-sm text-github-text-secondary">Aspect glyphs, in degree order.</p>
+<div class="symtable not-prose">
+  <div class="symcell" data-insert="q"><span class="key">q</span><span class="glyph">q</span><span class="label">Conjunction 0°</span></div>
+  <div class="symcell" data-insert="i"><span class="key">i</span><span class="glyph">i</span><span class="label">Semisextile 30°</span></div>
+  <div class="symcell" data-insert="y"><span class="key">y</span><span class="glyph">y</span><span class="label">Semisquare 45°</span></div>
+  <div class="symcell" data-insert="t"><span class="key">t</span><span class="glyph">t</span><span class="label">Sextile 60°</span></div>
+  <div class="symcell" data-insert="["><span class="key">[</span><span class="glyph">[</span><span class="label">Quintile 72° (Euro)</span></div>
+  <div class="symcell" data-insert="r"><span class="key">r</span><span class="glyph">r</span><span class="label">Square 90°</span></div>
+  <div class="symcell" data-insert="e"><span class="key">e</span><span class="glyph">e</span><span class="label">Trine 120°</span></div>
+  <div class="symcell" data-insert="u"><span class="key">u</span><span class="glyph">u</span><span class="label">Sequiquadrate 135°</span></div>
+  <div class="symcell" data-insert="]"><span class="key">]</span><span class="glyph">]</span><span class="label">Bi-quintile 144° (Euro)</span></div>
+  <div class="symcell" data-insert="o"><span class="key">o</span><span class="glyph">o</span><span class="label">Inconjunct 150°</span></div>
+  <div class="symcell" data-insert="w"><span class="key">w</span><span class="glyph">w</span><span class="label">Opposition 180°</span></div>
+</div>
+
+<h2>House angles &amp; points</h2>
+<div class="symtable not-prose">
+  <div class="symcell" data-insert="X"><span class="key">X</span><span class="glyph">X</span><span class="label">MC (Midheaven)</span></div>
+  <div class="symcell" data-insert="Z"><span class="key">Z</span><span class="glyph">Z</span><span class="label">AC (Ascendant)</span></div>
+  <div class="symcell" data-insert="B"><span class="key">B</span><span class="glyph">B</span><span class="label">EP (East Point)</span></div>
+  <div class="symcell" data-insert="N"><span class="key">N</span><span class="glyph">N</span><span class="label">Vesta (4-Vesta)</span></div>
+  <div class="symcell" data-insert="A"><span class="key">A</span><span class="glyph">A</span><span class="label">Aries Point</span></div>
+  <div class="symcell" data-insert="n"><span class="key">n</span><span class="glyph">n</span><span class="label">EQ (Equatorial Asc.)</span></div>
+  <div class="symcell" data-insert="m"><span class="key">m</span><span class="glyph">m</span><span class="label">Vertex</span></div>
+  <div class="symcell" data-insert="<"><span class="key">&lt;</span><span class="glyph">&lt;</span><span class="label">Part of Fortune</span></div>
+  <div class="symcell" data-insert="{"><span class="key">{</span><span class="glyph">{</span><span class="label">N. Node (true)</span></div>
+  <div class="symcell" data-insert="}"><span class="key">}</span><span class="glyph">}</span><span class="label">S. Node (true)</span></div>
+  <div class="symcell" data-insert="`"><span class="key">`</span><span class="glyph">`</span><span class="label">Mean Lunar Apogee</span></div>
+  <div class="symcell" data-insert="~"><span class="key">~</span><span class="glyph">~</span><span class="label">Osc. Lunar Apogee</span></div>
+</div>
+
+<h2>Notation marks</h2>
+<div class="symtable not-prose">
+  <div class="symcell" data-insert=";"><span class="key">;</span><span class="glyph">;</span><span class="label">Degree °</span></div>
+  <div class="symcell" data-insert="'"><span class="key">'</span><span class="glyph">'</span><span class="label">Minutes ′</span></div>
+  <div class="symcell" data-insert="&quot;"><span class="key">"</span><span class="glyph">"</span><span class="label">Seconds ″</span></div>
+  <div class="symcell" data-insert="="><span class="key">=</span><span class="glyph">=</span><span class="label">Equals</span></div>
+  <div class="symcell" data-insert="@"><span class="key">@</span><span class="glyph">@</span><span class="label">Slashed zero</span></div>
+  <div class="symcell" data-insert=">"><span class="key">&gt;</span><span class="glyph">&gt;</span><span class="label">Retrograde ℞</span></div>
+  <div class="symcell" data-insert="/"><span class="key">/</span><span class="glyph">/</span><span class="label">Midpoint slash</span></div>
+  <div class="symcell" data-insert="+"><span class="key">+</span><span class="glyph">+</span><span class="label">Plus</span></div>
+  <div class="symcell" data-insert="-"><span class="key">-</span><span class="glyph">-</span><span class="label">Minus</span></div>
+</div>
+
+<h2>Position subscripts</h2>
+<p class="text-sm text-github-text-secondary">Append after a planet to mark which chart it belongs to.</p>
+<div class="symtable not-prose">
+  <div class="symcell" data-insert="#"><span class="key">#</span><span class="glyph">#</span><span class="label">Natal (subscript n)</span></div>
+  <div class="symcell" data-insert="$"><span class="key">$</span><span class="glyph">$</span><span class="label">Radix (subscript r)</span></div>
+  <div class="symcell" data-insert="%"><span class="key">%</span><span class="glyph">%</span><span class="label">Solar arc (subscript s)</span></div>
+  <div class="symcell" data-insert="&amp;"><span class="key">&amp;</span><span class="glyph">&amp;</span><span class="label">Transit (subscript t)</span></div>
+  <div class="symcell" data-insert="^"><span class="key">^</span><span class="glyph">^</span><span class="label">Progressed (subscript p)</span></div>
+  <div class="symcell" data-insert="*"><span class="key">*</span><span class="glyph">*</span><span class="label">Directed (subscript d)</span></div>
+</div>
+
+<h2>Common asteroids (typeable)</h2>
+<div class="symtable not-prose">
+  <div class="symcell" data-insert="C"><span class="key">C</span><span class="glyph">C</span><span class="label">1-Ceres</span></div>
+  <div class="symcell" data-insert="V"><span class="key">V</span><span class="glyph">V</span><span class="label">2-Pallas</span></div>
+  <div class="symcell" data-insert="B"><span class="key">B</span><span class="glyph">B</span><span class="label">3-Juno</span></div>
+  <div class="symcell" data-insert="N"><span class="key">N</span><span class="glyph">N</span><span class="label">4-Vesta (NA)</span></div>
+  <div class="symcell" data-insert="M"><span class="key">M</span><span class="glyph">M</span><span class="label">2060-Chiron</span></div>
+</div>
+
+<details class="not-prose">
+  <summary>More glyphs (click to insert — these aren't on the keyboard)</summary>
+  <p class="text-sm text-github-text-secondary mt-2">
+    Indices 128–255 in the font. They aren't typeable on a U.S. keyboard; click any cell
+    to insert it into the composer above.
+  </p>
+  <div class="symtable not-prose" id="hibit-table"></div>
+</details>
+
+<h2 class="mt-10">A worked example</h2>
+
+<p>
+  The PDF gives <span class="hs-lg">W=14;35'42"a</span> — Moon at 14°35&prime;42&Prime;
+  Aries. Type <code>W=14;35'42"a</code>. To layer in a midpoint, the format is
+  <em>planet/planet=planet</em>:
+</p>
+
+<p class="hs-lg">U/W=Q</p>
+
+<p>
+  …typed <code>U/W=Q</code>. Saturn over Moon equals Sun — a classic Hamburg shorthand
+  for "the Sun sits on the Saturn/Moon midpoint."
+</p>
+
+<h2>Using it elsewhere on the site</h2>
+
+<p>
+  Anywhere on this site you can wrap text in <code>&lt;span class="font-hamburg"&gt;…&lt;/span&gt;</code>
+  and the ASCII inside renders in HamburgSymbols. That works in Markdown posts too —
+  the class is registered globally.
+</p>
+
+<p class="text-sm text-github-text-secondary">
+  Source: HamburgSymbols.ttf v1.02, public domain, 2005. Original PDF reference packaged
+  with the font in <code>NewtonSans-UnicodeFont</code>.
+</p>
+
+<script>
+(function () {
+  var input = document.getElementById('composer-input');
+  var preview = document.getElementById('composer-preview');
+  var copyBtn = document.getElementById('composer-copy');
+  var clearBtn = document.getElementById('composer-clear');
+  var status = document.getElementById('composer-status');
+
+  function sync() {
+    preview.textContent = input.value || ' ';
+  }
+  input.addEventListener('input', sync);
+  sync();
+
+  document.querySelectorAll('.symcell').forEach(function (cell) {
+    cell.addEventListener('click', function () {
+      var ch = cell.getAttribute('data-insert');
+      if (ch === null) return;
+      var start = input.selectionStart, end = input.selectionEnd;
+      input.value = input.value.slice(0, start) + ch + input.value.slice(end);
+      var caret = start + ch.length;
+      input.focus();
+      input.setSelectionRange(caret, caret);
+      sync();
+    });
+  });
+
+  copyBtn.addEventListener('click', function () {
+    navigator.clipboard.writeText(input.value).then(function () {
+      status.textContent = 'Copied. Paste into a HamburgSymbols-styled element.';
+      setTimeout(function () { status.textContent = ''; }, 2500);
+    });
+  });
+
+  clearBtn.addEventListener('click', function () {
+    input.value = '';
+    sync();
+    input.focus();
+  });
+
+  // Build the high-bit table (128-255). The font puts asteroids, alternate
+  // glyphs, fractions, and Avestan symbols up here.
+  var hibit = [
+    [129, 'Alt. Oscillating Lunar Apogee'],
+    [130, 'Uranus (European, astronomical)'],
+    [131, 'Neptune (alternate)'],
+    [132, 'Pluto (IAU official)'],
+    [133, 'Pluto (Scandinavian)'],
+    [134, 'Pluto (occasional)'],
+    [135, 'Pluto (Eastern Europe)'],
+    [136, 'Admetos (alternate)'],
+    [137, 'Earth'],
+    [138, 'Earth (alternate)'],
+    [139, "Moon's Mean North Node"],
+    [140, "Moon's Mean South Node"],
+    [141, "True N. Node (NA)"],
+    [142, "True S. Node (NA)"],
+    [143, 'Asc ligature (alt)'],
+    [144, 'Dsc ligature'],
+    [145, 'Dec ligature (alt Dsc)'],
+    [146, 'DC ligature (Dsc)'],
+    [147, 'IC (Nadir) ligature'],
+    [148, 'AP (Aries Point) ligature'],
+    [149, 'Vtx (Vertex) ligature'],
+    [150, 'CAs (Co-Asc) ligature'],
+    [151, 'PAs (Polar Asc) ligature'],
+    [152, 'Quintile 72° (NA)'],
+    [154, 'Bi-quintile 144° (NA)'],
+    [155, 'Parallel'],
+    [156, 'Contra-parallel'],
+    [157, 'Lunar eclipse'],
+    [158, '6-Hebe (cocktail)'],
+    [159, '6-Hebe (original)'],
+    [161, '1924-Horus (Eye of Horus)'],
+    [162, '$ double-bar dollars'],
+    [163, '£ double-bar pounds'],
+    [164, '€ euros'],
+    [165, '¥ double-bar yen'],
+    [166, '4-Vesta (original)'],
+    [167, '4-Vesta (modern)'],
+    [168, '4-Vesta (free font)'],
+    [170, '433-Eros'],
+    [171, '16-Psyche'],
+    [172, '5154-Pholus'],
+    [173, '7066-Nessus'],
+    [175, '10-Hygiea'],
+    [176, '19-Fortuna'],
+    [177, '± plus-minus'],
+    [178, '1181-Lilith'],
+    [179, '80-Sappho'],
+    [180, '52-Europa'],
+    [181, '52-Europa (alt)'],
+    [183, '916-America'],
+    [184, '10806-Mexico'],
+    [185, '241-Germania'],
+    [186, 'Sedna'],
+    [187, 'Varuna'],
+    [188, 'Ixion'],
+    [189, 'Quaoar'],
+    [190, 'Chaos'],
+    [191, 'Orcus'],
+    [192, '134-Sophrosyne'],
+    [193, '227-Philosophia'],
+    [194, '315-Constantia'],
+    [195, '309-Fraternitas'],
+    [196, '330-Modestia'],
+    [197, '380-Fiducia'],
+    [198, '451-Patientia'],
+    [199, '975-Perseverantia'],
+    [200, 'Avestan Vakshya'],
+    [201, 'Avestan Priap'],
+    [202, 'Avestan Utopia'],
+    [203, 'Avestan Aza'],
+    [204, 'Avestan Tishtar'],
+    [205, 'Avestan Vanand'],
+    [206, 'Avestan Haurang'],
+    [207, 'Avestan Rasi'],
+    [208, 'Avestan Proserpine'],
+    [209, 'Avestan Isis'],
+    [210, 'Avestan Osiris'],
+    [211, 'Avestan Anubis'],
+    [212, '1/1 (harmonic)'],
+    [213, '1/2'],
+    [214, '1/3'],
+    [215, '× multiply'],
+    [216, '1/4'], [217, '1/5'], [218, '1/6'], [219, '1/7'],
+    [220, '1/8'], [221, '1/9'], [222, '1/10'], [223, '1/11'],
+    [224, '1/12'], [225, '1/13'], [226, '1/14'], [227, '1/15'],
+    [247, '÷ divide'],
+    [248, "Waltemath's Darkmoon"],
+    [249, '2/15'], [250, '3/15'], [251, '4/15'], [252, '5/15'],
+    [253, '6/15'], [254, '7/15'], [255, '7/16'],
+  ];
+  var container = document.getElementById('hibit-table');
+  hibit.forEach(function (entry) {
+    var code = entry[0];
+    var label = entry[1];
+    var ch = String.fromCharCode(code);
+    var cell = document.createElement('div');
+    cell.className = 'symcell';
+    cell.setAttribute('data-insert', ch);
+    cell.innerHTML =
+      '<span class="key">' + code + '</span>' +
+      '<span class="glyph">' + ch + '</span>' +
+      '<span class="label">' + label + '</span>';
+    cell.addEventListener('click', function () {
+      var start = input.selectionStart, end = input.selectionEnd;
+      input.value = input.value.slice(0, start) + ch + input.value.slice(end);
+      var caret = start + ch.length;
+      input.focus();
+      input.setSelectionRange(caret, caret);
+      sync();
+    });
+    container.appendChild(cell);
+  });
+})();
+</script>
