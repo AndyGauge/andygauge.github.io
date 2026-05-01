@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang }}">
+
+  {% include head.html %}
+
+  <body class="bg-github-bg text-github-text">
+
+    {% include navigation.html %}
+
+    <main class="pt-16">
+      <article class="container-custom py-8">
+        <div class="max-w-3xl mx-auto">
+          {% if page.title %}
+          <header class="mb-8">
+            <h1 class="text-3xl md:text-4xl font-bold text-github-text mb-2">{{ page.title }}</h1>
+            {% if page.subtitle %}
+            <p class="text-github-text-secondary text-lg">{{ page.subtitle }}</p>
+            {% endif %}
+          </header>
+          {% endif %}
+
+          <div class="prose prose-lg max-w-none prose-code:before:content-none prose-code:after:content-none">
+            {{ content }}
+          </div>
+        </div>
+      </article>
+    </main>
+
+    {% include footer.html %}
+    {% include js.html %}
+
+  </body>
+</html>

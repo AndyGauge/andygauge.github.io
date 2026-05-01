@@ -2,6 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "HamburgSymbols";
+  src: url("/fonts/HamburgSymbols.ttf") format("truetype");
+  font-display: swap;
+}
+
+@layer utilities {
+  .font-hamburg {
+    font-family: "HamburgSymbols", serif;
+    font-feature-settings: normal;
+    /* Hamburg has equal-width metrics — keep typography overrides off. */
+    font-variant-ligatures: none;
+  }
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;
