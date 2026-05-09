@@ -73,6 +73,13 @@
   qr: /img/qr/too-many-lists.svg
   description: Aria Beingessner's Rust linked-lists book, rewritten with three parallel reader tracks (C / Py / 0) — same arc, three vantages — plus 2021/2024 edition deltas inline and a chapter-end perspective from each track.
 
+- title: Reducibility
+  slug: reducibility
+  category: Engineering & Talks
+  kind: book
+  qr: /img/qr/reducibility.svg
+  description: Karp's 1972 paper as a polyglot guided tour. Twenty-one NP-complete problems, twenty-one programming languages — overview, code, and business framing per chapter, with figure walkthroughs and a glossary of 130+ terms.
+
 # --- Society & History ---------------------------------------------------
 - title: The State With Teeth
   slug: the-state-with-teeth
