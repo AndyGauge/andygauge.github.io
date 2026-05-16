@@ -99,6 +99,13 @@
   kind: book
   description: Scripture on gender, left to right — thirty-five passages arranged by who-leads-whom.
 
+- title: JK
+  slug: krishnamurti
+  category: Society & History
+  kind: book
+  qr: /img/qr/krishnamurti.svg
+  description: Krishnamurti as prophesied by Jesus — sixty-seven sections tracing the correspondence between the Gospels and the teacher the Theosophical Society raised and then renounced.
+
 - title: The Knock Came Back
   slug: the-knock-came-back
   category: Society & History
