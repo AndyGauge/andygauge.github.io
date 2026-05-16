@@ -80,6 +80,13 @@
   qr: /img/qr/reducibility.svg
   description: Karp's 1972 paper as a polyglot guided tour. Twenty-one NP-complete problems, twenty-one programming languages — overview, code, and business framing per chapter, with figure walkthroughs and a glossary of 130+ terms.
 
+- title: N or P
+  slug: n-or-p
+  category: Engineering & Talks
+  kind: book
+  qr: /img/qr/n-or-p.svg
+  description: A working manager's guide to which engineering problems are cheap to solve and which are genuinely hard. Thirty-nine sections in five parts — the P/NP line, the solved problems, the hard ones, what to do when "hard" hits your roadmap, and a meeting-room diagnostic for telling them apart.
+
 # --- Society & History ---------------------------------------------------
 - title: The State With Teeth
   slug: the-state-with-teeth
