@@ -21,6 +21,8 @@ So I ran the experiment I had been wanting to run. I let an unauthenticated AI a
 
 Here is the part I care about. That did not happen because I wrote careful handlers that check a flag and refuse. It happened because in an unauthenticated context the private tools do not exist. The MCP tool registry is dynamic — the set of tools an actor is offered is itself a function of who that actor is. An anonymous reader is handed the tools that read public things, and those are the only tools on the table. There is no private-prayer tool to call, no group-feed tool to misuse, nothing to filter because nothing was ever registered. You cannot exploit a capability you were never granted, and that is the whole point of a dynamic tool registry: the safe surface is not the result of every handler behaving — it is the result of the unsafe surface not being there.
 
+That registry — the piece that decides which tools an actor may even see, by identity — is its own open-source crate: [mcp-authorization](https://crates.io/crates/mcp-authorization). It is where the noninterference guarantee actually lives. leptosbook gives the book its pages; mcp-authorization decides which pages exist for you at all.
+
 This is where full-stack Rust earns its keep. The same types describe the data on the server, over the wire, and in the browser, so the boundary between "published" and "private" is one definition, checked once, everywhere. A whole class of "oops, that field was serialized into the public response" bugs simply cannot compile. I have shipped apps in languages where that guarantee lives in your discipline and your tests. Here it lives in the compiler. For something holding people's prayers, I will take the compiler.
 
 ## leptosbook: the part worth keeping
