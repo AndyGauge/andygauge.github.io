@@ -194,9 +194,7 @@ Now we can safely retrieve the relative path, and pass that to the replace_all f
 
 ### Next Steps
 
-The Rust Cookbook will be split into shorter sections and to get there it will require a new version of mdBook to look correct.  Check it out here:
-
-[www.yetanother.site/rust-cookbook]
+The Rust Cookbook will be split into shorter sections and to get there it will require a new version of mdBook to look correct.
 
 [The Rust Cookbook]: https://github.com/rust-lang-nursery/rust-cookbook
 [issue]: https://github.com/rust-lang-nursery/rust-cookbook/issues/167
@@ -205,4 +203,3 @@ The Rust Cookbook will be split into shorter sections and to get there it will r
 [13 character PR]: https://github.com/rust-lang/mdBook/pull/682
 [Stacker]: https://github.com/alexcrichton/stacker/issues/2
 [Daft Punk]: https://genius.com/Daft-punk-around-the-world-lyrics
-[www.yetanother.site/rust-cookbook]: http://www.yetanother.site/rust-cookbook
