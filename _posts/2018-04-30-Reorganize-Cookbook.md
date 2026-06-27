@@ -2,7 +2,7 @@
 layout: post
 section-type: post
 title: Rust Cookbook Reorganization
-tags: [ 'mdbook']
+tags: [ 'rust', 'rust-cookbook', 'mdbook', 'open-source', '2018' ]
 ---
 
 In April, I took on a role of collaborator on [The Rust Cookbook].  The Cookbook is a collection of examples that demonstrate some of the crate ecosystem with real world examples.  

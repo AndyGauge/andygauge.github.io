@@ -2,7 +2,7 @@
 layout: post
 section-type: post
 title: 'Rust Cookbook Reach 2018'
-tags: [ '' ]
+tags: [ 'rust', 'rust-cookbook', 'open-source', '2020' ]
 ---
 
 The [Rust Cookbook] reached a major milestone today.  The 2015 
