@@ -101,7 +101,7 @@ Who knew what I was in for over that `&replace_all(`.
 > Hold yourself responsible for a higher standard than anybody expects of you. Never excuse yourself.
 > - Henry Ward Beecher
 
-What could go wrong with a simple 13 character PR?  Well, it is pretty easy to create stack too deep errors.  There currently is 2000 results on stackoverflow.com, a site named for stack too deep errors.  So what would we need to do to fix an exception when  infinite recursion occurs?
+What could go wrong with a simple [13 character PR]?  Well, it is pretty easy to create stack too deep errors.  There currently is 2000 results on stackoverflow.com, a site named for stack too deep errors.  So what would we need to do to fix an exception when  infinite recursion occurs?
 
 [Stacker] seemed like the perfect solution, but even when checking if the remaining stack was greater than 2000, the same exception occurred.  I had to implement my own max depth.
 
@@ -202,6 +202,7 @@ The Rust Cookbook will be split into shorter sections and to get there it will r
 [issue]: https://github.com/rust-lang-nursery/rust-cookbook/issues/167
 [mdBook]: https://github.com/rust-lang-nursery/mdBook
 [`replace_all` function]: https://github.com/rust-lang-nursery/mdBook/blob/master/src/preprocess/links.rs#L48-L75
+[13 character PR]: https://github.com/rust-lang/mdBook/pull/682
 [Stacker]: https://github.com/alexcrichton/stacker/issues/2
 [Daft Punk]: https://genius.com/Daft-punk-around-the-world-lyrics
 [www.yetanother.site/rust-cookbook]: http://www.yetanother.site/rust-cookbook
