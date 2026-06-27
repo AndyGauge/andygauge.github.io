@@ -5,7 +5,7 @@ title: A Month in the Rust Cookbook
 tags: [ '2026', 'rust', 'rust-cookbook', 'open-source', 'mentorship', 'documentation' ]
 ---
 
-**TL;DR.** Over the last month I landed 61 recipes in the [Rust Cookbook](https://github.com/rust-lang-nursery/rust-cookbook), plus a batch of fixes. I also helped five other contributors get their first or next recipes merged. The cookbook is the kind of documentation that meets people where they actually are. It answers the *"how do I do X in Rust"* question. Growing it is the most leverage I know of for someone new to the language. This post is the ledger: what I wrote, what I mentored, and why I think the boring maintenance mattered as much as the new sections.
+**TL;DR.** Over the last month I landed 61 recipes in the [Rust Cookbook](https://rust-lang-nursery.github.io/rust-cookbook), plus a batch of fixes. I also helped five other contributors get their first or next recipes merged. The cookbook is the kind of documentation that meets people where they actually are. It answers the *"how do I do X in Rust"* question. Growing it is the most leverage I know of for someone new to the language. This post is the ledger: what I wrote, what I mentored, and why I think the boring maintenance mattered as much as the new sections.
 
 ## Why the cookbook
 
