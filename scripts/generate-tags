@@ -1,16 +1,29 @@
 #!/usr/bin/env ruby
 
 require 'yaml'
+require 'date'
 
 POSTS_DIR = '_posts/'
 TAGS_DIR = 'tags/'
 
+# Read only the YAML front matter block (between the first pair of ---).
+def front_matter(path)
+  lines = File.readlines(path)
+  return nil unless lines.first&.strip == '---'
+  body = lines[1..].take_while { |l| l.strip != '---' }.join
+  YAML.safe_load(body, permitted_classes: [Date, Time])
+end
+
 Dir.foreach(POSTS_DIR) do |post|
 
   next if post == '.' or post == '..' or post == '.DS_Store'
-  postYaml = YAML.load_file(POSTS_DIR + post)
+  postYaml = front_matter(POSTS_DIR + post)
+  next if postYaml.nil?
   unless (postYaml['tags'] == nil)
     postYaml['tags'].each{|tag|
+
+      tag = tag.to_s.strip
+      next if tag.empty?
 
       unless File.exist?(TAGS_DIR + tag + '.html')
 
