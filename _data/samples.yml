@@ -1,8 +1,8 @@
 # Samples shown on the home page (rendered by _includes/samples.html).
 # Each entry: title, url, img, description (markdown allowed in description).
 
-- title: Sentinel RBS
-  url: https://github.com/andygauge/sentinel-rb
+- title: RBS Sentinel
+  url: https://github.com/andygauge/rbs-sentinel
   img: /img/samples/sentinel.png
   description: "Rust-powered file watcher that keeps Ruby RBS type signatures in sync with inline annotations. Provides instant feedback in your editor via Steep, parallel generation across thousands of files, and a CI-ready check command."
 
