@@ -100,6 +100,13 @@
   kind: book
   description: Walkthrough of Rust AsyncDrop userspace implementation using features for tokio, bound concurrency, and resumability
 
+- title: Rust GUI Frameworks
+  slug: rust-gui-frameworks
+  category: Engineering & Talks
+  kind: book
+  qr: /img/qr/rust-gui-frameworks.svg
+  description: A chronological survey of Rust GUI libraries, with sample code for each.
+
 # --- Society & History ---------------------------------------------------
 - title: The State With Teeth
   slug: the-state-with-teeth
