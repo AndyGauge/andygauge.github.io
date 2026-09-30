@@ -87,6 +87,19 @@
   qr: /img/qr/n-or-p.svg
   description: A working manager's guide to which engineering problems are cheap to solve and which are genuinely hard. Thirty-nine sections in five parts — the P/NP line, the solved problems, the hard ones, what to do when "hard" hits your roadmap, and a meeting-room diagnostic for telling them apart.
 
+- title: Reviewing Rust
+  slug: rust-reviewing-rust
+  category: Engineering & Talks
+  kind: book
+  qr: /img/qr/rust-reviewing-rust.svg
+  description: "A build log about teaching and serving a design-review model for Rust — in Rust. The model reads one diff hunk and writes the comment a senior reviewer would leave about design: API shape, invariants, edge cases, back-compat, the things a formatter can’t see."
+
+- title: Redrop
+  slug: redrop
+  category: Engineering & Talks
+  kind: book
+  description: Walkthrough of Rust AsyncDrop userspace implementation using features for tokio, bound concurrency, and resumability
+
 # --- Society & History ---------------------------------------------------
 - title: The State With Teeth
   slug: the-state-with-teeth
@@ -132,3 +145,10 @@
   kind: book
   qr: /img/qr/unitive.svg
   description: What lies past the Alchemist — Cook-Greuter's contested Unitive horizon. Thirty-six pages on the moment the constructed self collapses into the community it serves, with Solon, Susan Fowler, Niko Matsakis, and the open-source organizations that synthesize what no single corporation can.
+
+# --- Products ------------------------------------------------------------
+- title: pray.rs
+  slug: pray.rs
+  category: Products
+  kind: book
+  description: A quiet prayer book, not a feed — write prayers and share them privately, with a group, or publicly.
